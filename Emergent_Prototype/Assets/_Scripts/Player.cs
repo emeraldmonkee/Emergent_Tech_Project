@@ -23,6 +23,9 @@ public class Player : MonoBehaviour {
     void Update ()
     {
 
+        /*Fires a raycast infrount of the player  -Tom
+          Detects keys and pillars*/
+
         if (Input.GetButtonDown("Fire1"))
         {
 
@@ -33,7 +36,9 @@ public class Player : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, Distance))
             {
-                Debug.Log(hit.transform.gameObject);
+                //Debug.Log(hit.transform.gameObject);
+
+                //Sets a key bool to true while showing a key in the players hand  -Tom
                 if (hit.transform.gameObject.name == "keey" )
                 {
                     Destroy(hit.transform.gameObject);
@@ -41,6 +46,7 @@ public class Player : MonoBehaviour {
                     haskey = true;
                 }
 
+                //if play has the key, opens the doors 'Pillar.cs'  -Tom
                 if (hit.transform.gameObject.name == "Pillar")
                 {
                     if(haskey == true)

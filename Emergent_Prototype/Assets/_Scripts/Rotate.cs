@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+    //Script to rotate keys on top of the pillar -Tom
 	void Update ()
     {
         transform.Rotate(Vector3.right * Time.deltaTime * 14);

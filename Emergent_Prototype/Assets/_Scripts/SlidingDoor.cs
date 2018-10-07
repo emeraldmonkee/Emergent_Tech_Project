@@ -17,11 +17,11 @@ public class SlidingDoor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        //initializes the vectors for the doors  -Tom
         open = new Vector3(door.transform.position.x, door.transform.position.y + 4, door.transform.position.z);
         close = new Vector3(door.transform.position.x, door.transform.position.y, door.transform.position.z);
         moved = false;
-
-
 
     }
 	
@@ -36,7 +36,7 @@ public class SlidingDoor : MonoBehaviour {
         StartCoroutine(lerp(door.transform,open,4));
     }
 
-
+    //Lerps the position of the door to its new position  -Tom
     public IEnumerator lerp(Transform transform, Vector3 position, float timeToMove)
     {
         //Debug.Log("open seasume");
@@ -51,6 +51,7 @@ public class SlidingDoor : MonoBehaviour {
         }
     }
 
+    //Detects when the player walks past a door, and reopens the door if the player somehow does not reach the new room before the door closes  -Tom
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other);
