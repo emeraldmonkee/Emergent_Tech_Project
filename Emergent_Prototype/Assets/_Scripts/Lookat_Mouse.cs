@@ -11,14 +11,21 @@ public class Lookat_Mouse : MonoBehaviour
 
     GameObject character;
 
+    public GameObject MainCanvas;
+
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         character = this.transform.parent.gameObject;
     }
 
     void Update()
     {
+        if (Pause_Menu.gameIsPaused == true)
+        {
+            //This isn't working... Cri... plz help! <3
+            return;
+        }
+
         var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
 
         md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
@@ -29,10 +36,5 @@ public class Lookat_Mouse : MonoBehaviour
 
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
     }
 }

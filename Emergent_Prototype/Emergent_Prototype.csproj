@@ -304,8 +304,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Scripts\Btn_Manager.cs" />
     <Compile Include="Assets\_Scripts\Countdown_Clock.cs" />
     <Compile Include="Assets\_Scripts\Lookat_Mouse.cs" />
+    <Compile Include="Assets\_Scripts\Pause_Menu.cs" />
     <Compile Include="Assets\_Scripts\Pillar.cs" />
     <Compile Include="Assets\_Scripts\Player.cs" />
     <Compile Include="Assets\_Scripts\Player_Movement.cs" />
