@@ -7,10 +7,14 @@ public class Pause_Menu : MonoBehaviour
     public static bool gameIsPaused = false;
 
     public GameObject pauseMenu;
+    public GameObject UI_Menu;
+
+    public UnityStandardAssets.Characters.FirstPerson.FirstPersonController controller;
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;   
+        Cursor.visible = false;
     }
 
     void Update ()
@@ -28,17 +32,21 @@ public class Pause_Menu : MonoBehaviour
         }
 	}
 
-    void Resume()
+    public void Resume()
     {
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
+        controller.gameIsPaused = false;
         pauseMenu.SetActive(false);
+        UI_Menu.SetActive(true);
         Time.timeScale = 1;
         gameIsPaused = false;
     }
 
     void Pause()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
+        controller.gameIsPaused = true;
+        UI_Menu.SetActive(false);
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
         gameIsPaused = true;

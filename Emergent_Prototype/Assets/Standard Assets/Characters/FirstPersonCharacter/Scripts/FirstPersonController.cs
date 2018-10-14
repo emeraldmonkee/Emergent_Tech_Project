@@ -42,6 +42,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        public bool gameIsPaused;
+
+        private void Awake()
+        {
+            gameIsPaused = false;
+        }
+
         // Use this for initialization
         private void Start()
         {
@@ -236,6 +243,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
+            if (gameIsPaused)
+            {
+                return;
+            }
+
             m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 
