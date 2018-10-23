@@ -187,7 +187,6 @@ GameObject:
   - component: {fileID: 33261776694922400}
   - component: {fileID: 23538138086814320}
   - component: {fileID: 65772446231338008}
-  - component: {fileID: 114007021721351874}
   m_Layer: 0
   m_Name: Pillar
   m_TagString: Untagged
@@ -4092,31 +4091,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114007021721351874
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1237611964846360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6be15e8d7763c47b0ad00decc39727, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: {fileID: 1659339769632888}
-  roomnode: {fileID: 1890972018612834, guid: 8cdf8d10c30bd32419f10b0b1ff6faab, type: 2}
-  doors: {fileID: 1978516350558384}
-  slide:
-  - {fileID: 1981768288071350}
-  - {fileID: 1561452430170900}
-  - {fileID: 1505425435939696}
-  - {fileID: 1741739614937996}
-  open: {fileID: 0}
-  points:
-  - {fileID: 4915823945519042}
-  - {fileID: 4797193959682988}
-  - {fileID: 4807888217895730}
-  - {fileID: 4661451056817108}
 --- !u!114 &114076883267952928
 MonoBehaviour:
   m_ObjectHideFlags: 1

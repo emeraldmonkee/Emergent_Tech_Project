@@ -6,14 +6,14 @@ public class Pillar : MonoBehaviour {
 
     public GameObject key;
 
-    public GameObject roomnode;
+    //public GameObject roomnode;
 
-    public GameObject doors;
+    //public GameObject doors;
     public GameObject[] slide;
 
     public SlidingDoor open;
 
-    public Transform[] points;
+    //public Transform[] points;
 
 	// Use this for initialization
 	void Start () {
@@ -30,13 +30,15 @@ public class Pillar : MonoBehaviour {
     //Instantiates new rooms at each of the exits and opens the doors 'SlidingDoor.cs' -Tom
     public void Activekey()
     {
-        key.SetActive(true);
-        doors.SetActive(false);
+        Debug.Log("opneinihnrihgnrehi");
 
-        for (int i = 0; i < points.Length; i++)
-        {
-            Instantiate(roomnode, points[i].transform.position, points[i].transform.rotation);
-        }
+        key.SetActive(true);
+        //doors.SetActive(false);
+
+        //for (int i = 0; i < points.Length; i++)
+        //{
+        //    Instantiate(roomnode, points[i].transform.position, points[i].transform.rotation);
+        //}
 
         for (int i = 0; i < slide.Length; i++)
         {
