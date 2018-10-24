@@ -313,6 +313,7 @@
     <Compile Include="Assets\_Scripts\Pillar.cs" />
     <Compile Include="Assets\_Scripts\Player.cs" />
     <Compile Include="Assets\_Scripts\Player_Movement.cs" />
+    <Compile Include="Assets\_Scripts\Pressure_Plate.cs" />
     <Compile Include="Assets\_Scripts\Rooms.cs" />
     <Compile Include="Assets\_Scripts\Rotate.cs" />
     <Compile Include="Assets\_Scripts\SlidingDoor.cs" />

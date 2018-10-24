@@ -15,8 +15,10 @@ public class Pillar : MonoBehaviour {
 
     //public Transform[] points;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject Clock;
+
+    // Use this for initialization
+    void Start () {
 
 		
 	}
@@ -33,7 +35,7 @@ public class Pillar : MonoBehaviour {
 
         key.SetActive(true);
         //doors.SetActive(false);
-
+        Clock.GetComponent<Countdown_Clock>().gameIsPlaying = false;
         //for (int i = 0; i < points.Length; i++)
         //{
         //    Instantiate(roomnode, points[i].transform.position, points[i].transform.rotation);
