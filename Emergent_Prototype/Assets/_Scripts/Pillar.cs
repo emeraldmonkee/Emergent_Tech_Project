@@ -30,7 +30,6 @@ public class Pillar : MonoBehaviour {
     //Instantiates new rooms at each of the exits and opens the doors 'SlidingDoor.cs' -Tom
     public void Activekey()
     {
-        Debug.Log("opneinihnrihgnrehi");
 
         key.SetActive(true);
         //doors.SetActive(false);
@@ -43,7 +42,7 @@ public class Pillar : MonoBehaviour {
         for (int i = 0; i < slide.Length; i++)
         {
             open = slide[i].GetComponent<SlidingDoor>();
-            open.opendoor();
+            open.keyon();
         }
 
 

@@ -14,6 +14,8 @@ public class SlidingDoor : MonoBehaviour {
 
     public bool moved;
 
+    public BoxCollider R;
+
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +24,7 @@ public class SlidingDoor : MonoBehaviour {
         open = new Vector3(door.transform.position.x, door.transform.position.y + 4, door.transform.position.z);
         close = new Vector3(door.transform.position.x, door.transform.position.y, door.transform.position.z);
         moved = false;
+        R.enabled = false;
 
     }
 	
@@ -31,16 +34,17 @@ public class SlidingDoor : MonoBehaviour {
 		
 	}
 
-    public void opendoor()
+    public void keyon()
     {
-        StartCoroutine(lerp(door.transform,open,4));
+        R.enabled = true;
+        //StartCoroutine(Lerp(door.transform,open,4));
     }
 
     //Lerps the position of the door to its new position  -Tom
-    public IEnumerator lerp(Transform transform, Vector3 position, float timeToMove)
+    public IEnumerator Lerp(Transform transform, Vector3 position, float timeToMove)
     {
         //Debug.Log("open seasume");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0);
         var currentPos = transform.position;
         var t = 0f;
         while (t < 1)
@@ -52,26 +56,24 @@ public class SlidingDoor : MonoBehaviour {
     }
 
     //Detects when the player walks past a door, and reopens the door if the player somehow does not reach the new room before the door closes  -Tom
-    private void OnTriggerEnter(Collider other)
+  public void opendoor()
     {
-        //Debug.Log(other);
-        if(other.tag == ("Player"))
+        if (moved == false)
         {
-            if (moved == false)
-            {
-                GetComponent<BoxCollider>().transform.position = lockin.transform.position;
-                StartCoroutine(lerp(door.transform, close, 2));
-                moved = true;
-            }
-            else if (moved == true)
-            {
-                GetComponent<BoxCollider>().transform.position = lockout.transform.position;
-                StartCoroutine(lerp(door.transform, open, 2));
-                moved = false;
-            }
+            //GetComponent<BoxCollider>().transform.position = lockout.transform.position;
+            StartCoroutine(Lerp(door.transform, open, 1));
+            moved = true;
         }
-
-
-
     }
+
+    public void closedoor()
+    {
+        if (moved == true)
+        {
+            //GetComponent<BoxCollider>().transform.position = lockout.transform.position;
+            StartCoroutine(Lerp(door.transform, close, 1));
+            moved = false;
+        }
+    }
+
 }
