@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-D:/Anglia Ruskin Year 3/Unity_Projects/Emergent_Tech_Project/Builds/Test_Build/Test_Build.exe
+D:/Anglia Ruskin Year 3/Unity_Projects/Emergent_Tech_Project/Builds/Builds.exe
 SceneListBegin?
 Assets/_Scenes/Menu.unity
 Assets/_Scenes/Prototype.unity
@@ -85,7 +85,9 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+a8a8f504f3f6e4917f898a200e17d0c2 Assembly-CSharp.dll:.Pressure_Plate
 6c156248975c65e334daa4cbfba64bd1 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.TimedObjectActivator
+00b7a9c6ca4fb0c21f14e12cb4b4e4e4 Assembly-CSharp.dll:.LevelCreation
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 cf455f7a806648c6ed4c7d3e3f8a0e03 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 13bdb7c23815c33a33b37b0ba8dd39be UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -127,7 +129,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.DragRigidbody
 78ebae5ed9b3edeb216da437b99754a4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
 149e538468c9a609cf26b23682c996c7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.PlatformSpecificContent
-36a90a5aa32867567f7d7e3d4d36d198 Assembly-CSharp.dll:.Pause_Menu
+1c905697bdfab7b462d7f605361e2b64 Assembly-CSharp.dll:.Pause_Menu
 4df86f437a61b08c14fd0adff88ddf71 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.ActivateTrigger
 a2efb0db652b8114d1ae7dd9a600d626 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.InputAxisScrollbar
 fe76270bd84ec3b6f2f6f92c69cf69da Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.AxisTouchButton
@@ -163,6 +165,7 @@ f02726adeff0a3ec5905565234b372da UnityEngine.TestRunner.dll:UnityEngine.TestTool
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
+b892808221a37a6885c704c6222bcd3f Assembly-CSharp.dll:.DoorCol
 9e0ef5bf862444b5dc48b5a99554ce7c UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
@@ -176,13 +179,13 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-ece8d5ffdaa5a9408e1600381e4617cb Assembly-CSharp.dll:.SlidingDoor
+757bc8bd442ed364200454959cbb4208 Assembly-CSharp.dll:.SlidingDoor
 db3b233e35a88802fed1717d19c3d9ec Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FollowTarget
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 0ad469aca31264c6140b1e503c43ab6b Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.TimedObjectDestructor
 6fd90871ed65c241ed810a6a0dd6e9b6 Assembly-CSharp.dll:.Lookat_Mouse
-5470cf291ad5dbb8a45b57bb6696b3ba Assembly-CSharp.dll:.Pillar
+316f59038b71e736976530ceb7f77912 Assembly-CSharp.dll:.Pillar
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FPSCounter
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Player_Movement
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Countdown_Clock
+a16443be618f3274fabd661bdb2a7870 Assembly-CSharp.dll:.Countdown_Clock
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch

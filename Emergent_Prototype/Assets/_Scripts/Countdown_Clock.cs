@@ -14,8 +14,11 @@ public class Countdown_Clock : MonoBehaviour
 
     public bool gameIsPlaying = false;
 
+    private GameObject gameOverUI;
+
 	void Start ()
     {
+        gameOverUI = GameObject.Find("GameOver_Menu");
         timerText = GetComponent<Text>();
 	}
 	
@@ -42,6 +45,7 @@ public class Countdown_Clock : MonoBehaviour
 
     void LoseCondition()
     {
-        Debug.Log("You Died.");
+        gameOverUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.Confined;
     }
 }

@@ -8,18 +8,20 @@ public class Pause_Menu : MonoBehaviour
 
     public GameObject pauseMenu;
     public GameObject UI_Menu;
+    public GameObject gameOverMenu;
 
     public UnityStandardAssets.Characters.FirstPerson.FirstPersonController controller;
 
     void Start()
     {
+        gameOverMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;   
         Cursor.visible = false;
     }
 
     void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && gameOverMenu.activeInHierarchy == false)
         {
             if (gameIsPaused)
             {
