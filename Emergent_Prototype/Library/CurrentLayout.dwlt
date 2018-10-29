@@ -20,7 +20,15 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 613}
+=======
+<<<<<<< HEAD
+  m_MinSize: {x: 950, y: 521}
+=======
+  m_MinSize: {x: 950, y: 592}
+>>>>>>> parent of ae7dd2c... Game over UI implemented
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +51,11 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 613}
+=======
+  m_MinSize: {x: 950, y: 521}
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -107,10 +119,24 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 713, y: 563}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
   controlID: 208
+=======
+<<<<<<< HEAD
+  m_MinSize: {x: 713, y: 471}
+  m_MaxSize: {x: 18008, y: 14021}
+  vertical: 0
+  controlID: 39
+=======
+  m_MinSize: {x: 713, y: 542}
+  m_MaxSize: {x: 18008, y: 14042}
+  vertical: 0
+  controlID: 102
+>>>>>>> parent of ae7dd2c... Game over UI implemented
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +160,15 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 563}
   m_MaxSize: {x: 4002, y: 12063}
   vertical: 1
+<<<<<<< HEAD
   controlID: 209
+=======
+<<<<<<< HEAD
+  controlID: 40
+=======
+  controlID: 103
+>>>>>>> parent of ae7dd2c... Game over UI implemented
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,9 +210,19 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1350
+<<<<<<< HEAD
     height: 225
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+<<<<<<< HEAD
+    height: 587
+=======
+    height: 221
+>>>>>>> parent of ae7dd2c... Game over UI implemented
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 16}
@@ -228,9 +272,15 @@ MonoBehaviour:
     y: 587
     width: 1350
     height: 360
+<<<<<<< HEAD
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 16}
+=======
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
+>>>>>>> parent of ae7dd2c... Game over UI implemented
   m_Panes:
   - {fileID: 18}
   m_Selected: 0
@@ -255,11 +305,20 @@ MonoBehaviour:
     y: 0
     width: 261
     height: 947
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 234, y: 471}
+  m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
+<<<<<<< HEAD
   controlID: 279
+=======
+<<<<<<< HEAD
+  controlID: 123
+--- !u!114 &10
+=======
+  controlID: 10
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
 --- !u!114 &12
+>>>>>>> parent of ae7dd2c... Game over UI implemented
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,9 +336,20 @@ MonoBehaviour:
     y: 0
     width: 261
     height: 348
+<<<<<<< HEAD
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+<<<<<<< HEAD
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
+=======
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
   m_ActualView: {fileID: 19}
+>>>>>>> parent of ae7dd2c... Game over UI implemented
   m_Panes:
   - {fileID: 19}
   m_Selected: 0
@@ -370,10 +440,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -512
     m_HBaseRangeMax: 512
     m_VBaseRangeMin: -384
     m_VBaseRangeMax: 384
+=======
+    m_HBaseRangeMin: -960
+    m_HBaseRangeMax: 960
+    m_VBaseRangeMin: -540
+    m_VBaseRangeMax: 540
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -382,9 +459,19 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+<<<<<<< HEAD
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
+=======
+    m_EnableMouseInput: 1
+<<<<<<< HEAD
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+=======
+    m_EnableSliderZoom: 0
+>>>>>>> parent of ae7dd2c... Game over UI implemented
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
     m_UniformScale: 1
     m_UpDirection: 1
     m_DrawArea:
@@ -413,8 +500,16 @@ MonoBehaviour:
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
+<<<<<<< HEAD
   m_XRRenderMode: 0
+=======
+<<<<<<< HEAD
+  m_XRRenderMode: 0
+--- !u!114 &14
+=======
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
 --- !u!114 &16
+>>>>>>> parent of ae7dd2c... Game over UI implemented
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -502,7 +597,15 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.49626267, y: -0.008803106, z: 0.0065322323, w: 0.86815494}
     speed: 2
+<<<<<<< HEAD
     m_Value: {x: -0.49626267, y: 0.008803106, z: -0.0065322323, w: -0.8681549}
+=======
+<<<<<<< HEAD
+    m_Value: {x: -0.007795531, y: 0.012374076, z: -0.0013821116, w: -0.99993896}
+=======
+    m_Value: {x: -0.123180985, y: 0.13376743, z: -0.018073315, w: -0.98320687}
+>>>>>>> parent of ae7dd2c... Game over UI implemented
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
   m_Size:
     m_Target: 457.0992
     speed: 2
@@ -570,9 +673,21 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: e6fbffff00000000
+=======
+<<<<<<< HEAD
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: e6fbffff00000000
+=======
+    m_SelectedIDs: eefbffff
+    m_LastClickedID: -1042
+    m_ExpandedIDs: 0afbffffeefbfffff0fbffff00000000
+>>>>>>> parent of ae7dd2c... Game over UI implemented
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -644,7 +759,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 102a0000
     m_LastClickedID: 10768
+<<<<<<< HEAD
     m_ExpandedIDs: ffffffff000000004c2a00006e2a00007c2b0000122c0000242d0000a62d0000f42d0000b4330000b6330000b8330000
+=======
+<<<<<<< HEAD
+    m_ExpandedIDs: 000000004c2a0000542a00006e2a00006e2b00007c2b0000ee2b0000122c0000242d0000a02d0000a62d0000f42d0000d6330000d8330000da330000
+=======
+    m_ExpandedIDs: 00000000b6290000be290000da290000e22a0000f22a00006a2b0000882b00008c2c00000a2d00005a2d0000fa320000fc320000fe320000
+>>>>>>> parent of ae7dd2c... Game over UI implemented
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -672,7 +795,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: ffffffff000000006e2a00007c2b0000122c0000242d0000a62d0000f42d0000b4330000b6330000b8330000
+=======
+<<<<<<< HEAD
+    m_ExpandedIDs: ffffffff000000004c2a0000542a00006e2a00006e2b00007c2b0000ee2b0000122c0000242d0000a02d0000a62d0000f42d0000d6330000d8330000da330000
+=======
+    m_ExpandedIDs: 00000000b6290000be290000da290000e22a0000f22a00006a2b0000882b00008c2c0000042d00000a2d00005a2d0000fa320000fc320000fe320000
+>>>>>>> parent of ae7dd2c... Game over UI implemented
+>>>>>>> ec12e4b3fb2f61ce4c92d4b6bdb85a40a11fb153
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
