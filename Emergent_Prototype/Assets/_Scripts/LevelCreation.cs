@@ -9,7 +9,7 @@ public class LevelCreation : MonoBehaviour
     List<Vector2> takenPositions = new List<Vector2>();
     int gridSizeX, gridSizeY, numberOfRooms = 7;
     public GameObject room1;
-    void Awake()
+    void Start()
     {
         if (numberOfRooms >= (worldSize.x * 2) * (worldSize.y * 2))
         { // make sure we dont try to make more rooms than can fit in our grid
