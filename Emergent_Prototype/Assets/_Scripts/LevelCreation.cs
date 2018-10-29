@@ -7,7 +7,8 @@ public class LevelCreation : MonoBehaviour
     Vector2 worldSize = new Vector2( 4, 4);
     Rooms[,] rooms;
     List<Vector2> takenPositions = new List<Vector2>();
-    int gridSizeX, gridSizeY, numberOfRooms = 7;
+    int gridSizeX, gridSizeY;
+    [SerializeField] int numberOfRooms = 50;
     public GameObject room1;
     void Start()
     {
