@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d28b703d56fb694080756683b0ff602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfRooms: 7
+  numberOfRooms: 10
   room_NESW: {fileID: 1168830754088924, guid: fc531b296044ea8468882b53b9a7baf3, type: 2}
   room_NES: {fileID: 1833775396208310, guid: 9bf6fdbb66c2d194998ed0b1e3c7ec42, type: 2}
   room_ESW: {fileID: 1205410698371126, guid: b2aa1116ecc88d14f8a5d590c3012877, type: 2}
