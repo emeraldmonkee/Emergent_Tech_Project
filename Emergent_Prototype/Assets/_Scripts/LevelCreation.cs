@@ -8,8 +8,8 @@ public class LevelCreation : MonoBehaviour
     Rooms[,] rooms;
     List<Vector2> takenPositions = new List<Vector2>();
     int gridSizeX, gridSizeY;
-    [SerializeField] int numberOfRooms = 50;
-    public GameObject room1;
+    [SerializeField] int numberOfRooms;
+    public GameObject room_NESW, room_NES, room_ESW, room_SWN, room_WNE, room_NE, room_ES, room_SW, room_WN, room_NS, room_EW, room_N, room_E, room_S, room_W;
     void Start()
     {
         if (numberOfRooms >= (worldSize.x * 2) * (worldSize.y * 2))
@@ -175,7 +175,7 @@ public class LevelCreation : MonoBehaviour
             drawPos.y *= 8;
             drawPos.z *= 35;
             //create map obj and assign its variables
-            GameObject cube = Instantiate(room1, drawPos, Quaternion.identity);
+            GameObject cube = Instantiate(room_NESW, drawPos, Quaternion.identity);
             //         cube.Type = room.type;
             //cube.Top = room.doorTop;
             //cube.down = room.doorBot;
