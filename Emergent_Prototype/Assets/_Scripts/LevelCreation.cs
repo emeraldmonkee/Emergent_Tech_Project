@@ -9,6 +9,8 @@ public class LevelCreation : MonoBehaviour
     List<Vector2> takenPositions = new List<Vector2>();
     int gridSizeX, gridSizeY;
     [SerializeField] int numberOfRooms;
+
+    public bool up, down, left, right;
     public GameObject room_NESW, room_NES, room_ESW, room_SWN, room_WNE, room_NE, room_ES, room_SW, room_WN, room_NS, room_EW, room_N, room_E, room_S, room_W;
     void Start()
     {
@@ -175,12 +177,15 @@ public class LevelCreation : MonoBehaviour
             drawPos.y *= 8;
             drawPos.z *= 35;
             //create map obj and assign its variables
-            GameObject cube = Instantiate(room_NESW, drawPos, Quaternion.identity);
-            //         cube.Type = room.type;
-            //cube.Top = room.doorTop;
-            //cube.down = room.doorBot;
-            //cube.right = room.doorRight;
-            //cube.left = room.doorLeft;
+
+
+            SpawnRoom(drawPos);
+            //type minigame type
+            //Type = room.type;
+            up = room.doorTop;
+            down = room.doorBot;
+            right = room.doorRight;
+            left = room.doorLeft;
         }
     }
     void SetRoomDoors()
@@ -227,6 +232,110 @@ public class LevelCreation : MonoBehaviour
                     rooms[x, y].doorRight = (rooms[x + 1, y] != null);
                 }
             }
+        }
+    }
+
+    void SpawnRoom(Vector3 pos)
+    { //pick prefab based on adjaccent rooms
+        if (up)
+        {
+            if (down)
+            {
+                if (right)
+                {
+                    if (left)
+                    {
+                        Instantiate(room_NESW, pos, Quaternion.identity);
+                    }
+                    else
+                    {
+                        Instantiate(room_NES, pos, Quaternion.identity);
+                        //rend.sprite = spDRU;
+                    }
+                }
+                else if (left)
+                {
+                    Instantiate(room_SWN, pos, Quaternion.identity);
+                    //rend.sprite = spULD;
+                }
+                else
+                {
+                    Instantiate(room_NS, pos, Quaternion.identity);
+                    //rend.sprite = spUD;
+                }
+            }
+            else
+            {
+                if (right)
+                {
+                    if (left)
+                    {
+                        Instantiate(room_WNE, pos, Quaternion.identity);
+                        //rend.sprite = spRUL;
+                    }
+                    else
+                    {
+                        Instantiate(room_NE, pos, Quaternion.identity);
+                        //rend.sprite = spUR;
+                    }
+                }
+                else if (left)
+                {
+                    Instantiate(room_WN, pos, Quaternion.identity);
+                    //rend.sprite = spUL;
+                }
+                else
+                {
+                    Instantiate(room_N, pos, Quaternion.identity);
+                    //rend.sprite = spU;
+                }
+            }
+            return;
+        }
+        if (down)
+        {
+            if (right)
+            {
+                if (left)
+                {
+                    Instantiate(room_ESW, pos, Quaternion.identity);
+                    //rend.sprite = spLDR;
+                }
+                else
+                {
+                    Instantiate(room_ES, pos, Quaternion.identity);
+                    //rend.sprite = spDR;
+                }
+            }
+            else if (left)
+            {
+                Instantiate(room_SW, pos, Quaternion.identity);
+                //rend.sprite = spDL;
+            }
+            else
+            {
+                Instantiate(room_S, pos, Quaternion.identity);
+                ///rend.sprite = spD;
+            }
+            return;
+        }
+        if (right)
+        {
+            if (left)
+            {
+                Instantiate(room_EW, pos, Quaternion.identity);
+                //rend.sprite = spRL;
+            }
+            else
+            {
+                Instantiate(room_E, pos, Quaternion.identity);
+                //rend.sprite = spR;
+            }
+        }
+        else
+        {
+            Instantiate(room_W, pos, Quaternion.identity);
+            //rend.sprite = spL;
         }
     }
 }
