@@ -358,6 +358,7 @@ MonoBehaviour:
   room_E: {fileID: 1850727888865982, guid: 1acaff87204b7d64097736262f279108, type: 2}
   room_S: {fileID: 1295435397149826, guid: 41bed72d367b57f49b614925709cfd50, type: 2}
   room_W: {fileID: 1138420138740806, guid: fa332edbb09e0ec41a13fa8b7a96c73d, type: 2}
+  CUBE: {fileID: 1287589745672184, guid: 1b7bcbda16d63f744ad0eb5b16d2c325, type: 2}
 --- !u!1 &520229433
 GameObject:
   m_ObjectHideFlags: 0
