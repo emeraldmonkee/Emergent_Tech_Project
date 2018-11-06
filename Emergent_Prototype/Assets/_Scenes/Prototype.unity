@@ -866,15 +866,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77dcd9c5c3a298e4db9eae76ece9edbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 741394492}
-  UI_Menu: {fileID: 1849707355}
-  controller: {fileID: 986022504}
---- !u!114 &986022504 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1480909446}
-  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  pauseMenu: {fileID: 0}
+  UI_Menu: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!1 &1048990559
 GameObject:
   m_ObjectHideFlags: 0
