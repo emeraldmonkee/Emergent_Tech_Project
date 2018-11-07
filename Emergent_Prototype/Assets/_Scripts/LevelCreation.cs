@@ -238,217 +238,219 @@ public class LevelCreation : MonoBehaviour
 
     void SpawnRoom(Vector3 pos)
     { //pick prefab based on adjaccent rooms
-        if (up)
-        {
-            if (down)
-            {
-                if (right)
-                {
-                    if (left)
-                    {
-                        Instantiate(room_NESW, pos, Quaternion.identity);
-                        Debug.Log("NESW");
-                    }
-                    else
-                    {
-                        Instantiate(room_NES, pos, Quaternion.identity);
-                        //rend.sprite = spDRU;
-                    }
-                }
-                else if (left)
-                {
-                    //
-                    Instantiate(room_SWN, pos, Quaternion.identity);
-                    //rend.sprite = spULD;
-                }
-                else
-                {
-                    Instantiate(room_NS, pos, Quaternion.identity);
-                    //rend.sprite = spUD;
-                }
-            }
-            else
-            {
-                if (right)
-                {
-                    if (left)
 
-                    {
-                        Instantiate(room_WNE, pos, Quaternion.identity);
-                        //rend.sprite = spRUL;
-                    }
-                    else
-                    {
-                        Instantiate(room_NE, pos, Quaternion.identity);
-                        //rend.sprite = spUR;
-                    }
-                }
-                else if (left)
-                {
-                    Instantiate(room_WN, pos, Quaternion.identity);
-                    //rend.sprite = spUL;
-                }
-                else
-                {
-                    Instantiate(room_N, pos, Quaternion.identity);
-                    //rend.sprite = spU;
-                }
-            }
-            return;
-        }
-        if (down)
-        {
-            if (right)
-            {
-                if (left)
-                {
-                    Instantiate(room_ESW, pos, Quaternion.identity);
-                    //rend.sprite = spLDR;
-                }
-                else
-                {
-                    Instantiate(room_ES, pos, Quaternion.identity);
-                    //rend.sprite = spDR;
-                }
-            }
-            else if (left)
-            {
-                Instantiate(room_SW, pos, Quaternion.identity);
-                //rend.sprite = spDL;
-            }
-            else
-            {
-                Instantiate(room_S, pos, Quaternion.identity);
-                ///rend.sprite = spD;
-            }
-            return;
-        }
-        if (right)
-        {
-            if (left)
-            {
-                Instantiate(room_EW, pos, Quaternion.identity);
-                //rend.sprite = spRL;
-            }
-            else
-            {
-                Instantiate(room_E, pos, Quaternion.identity);
-                //rend.sprite = spR;
-            }
-        }
-        else
-        {
-            Instantiate(room_W, pos, Quaternion.identity);
-            //rend.sprite = spL;
-        }
+        Instantiate(room_NESW, pos, Quaternion.identity);
+        //    if (up)
+        //    {
+        //        if (down)
+        //        {
+        //            if (right)
+        //            {
+        //                if (left)
+        //                {
+        //                    Instantiate(room_NESW, pos, Quaternion.identity);
+        //                    Debug.Log("NESW");
+        //                }
+        //                else
+        //                {
+        //                    Instantiate(room_NES, pos, Quaternion.identity);
+        //                    //rend.sprite = spDRU;
+        //                }
+        //            }
+        //            else if (left)
+        //            {
+        //                //
+        //                Instantiate(room_SWN, pos, Quaternion.identity);
+        //                //rend.sprite = spULD;
+        //            }
+        //            else
+        //            {
+        //                Instantiate(room_NS, pos, Quaternion.identity);
+        //                //rend.sprite = spUD;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            if (right)
+        //            {
+        //                if (left)
+
+        //                {
+        //                    Instantiate(room_WNE, pos, Quaternion.identity);
+        //                    //rend.sprite = spRUL;
+        //                }
+        //                else
+        //                {
+        //                    Instantiate(room_NE, pos, Quaternion.identity);
+        //                    //rend.sprite = spUR;
+        //                }
+        //            }
+        //            else if (left)
+        //            {
+        //                Instantiate(room_WN, pos, Quaternion.identity);
+        //                //rend.sprite = spUL;
+        //            }
+        //            else
+        //            {
+        //                Instantiate(room_N, pos, Quaternion.identity);
+        //                //rend.sprite = spU;
+        //            }
+        //        }
+        //        return;
+        //    }
+        //    if (down)
+        //    {
+        //        if (right)
+        //        {
+        //            if (left)
+        //            {
+        //                Instantiate(room_ESW, pos, Quaternion.identity);
+        //                //rend.sprite = spLDR;
+        //            }
+        //            else
+        //            {
+        //                Instantiate(room_ES, pos, Quaternion.identity);
+        //                //rend.sprite = spDR;
+        //            }
+        //        }
+        //        else if (left)
+        //        {
+        //            Instantiate(room_SW, pos, Quaternion.identity);
+        //            //rend.sprite = spDL;
+        //        }
+        //        else
+        //        {
+        //            Instantiate(room_S, pos, Quaternion.identity);
+        //            ///rend.sprite = spD;
+        //        }
+        //        return;
+        //    }
+        //    if (right)
+        //    {
+        //        if (left)
+        //        {
+        //            Instantiate(room_EW, pos, Quaternion.identity);
+        //            //rend.sprite = spRL;
+        //        }
+        //        else
+        //        {
+        //            Instantiate(room_E, pos, Quaternion.identity);
+        //            //rend.sprite = spR;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Instantiate(room_W, pos, Quaternion.identity);
+        //        //rend.sprite = spL;
+        //    }
+        //}
+
+
+        //void SpawnRoom(Vector3 pos)
+        //{ //pick prefab based on adjaccent rooms
+        //    if (up)
+        //    {
+        //        if (down)
+        //        {
+        //            if (right)
+        //            {
+        //                if (left)
+        //                {
+        //                    Instantiate(room_EW, pos, Quaternion.identity);
+        //                }
+        //                else
+        //                {
+        //                    Instantiate(room_SW, pos, Quaternion.identity);
+
+        //                }
+        //            }
+        //            else if (left)
+        //            {
+        //                //
+        //                Instantiate(CUBE, pos, Quaternion.identity);
+        //                //rend.sprite = spULD;
+        //            }
+        //            else
+        //            {
+        //                Instantiate(room_W, pos, Quaternion.identity);
+        //                //rend.sprite = spUD;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            if (right)
+        //            {
+        //                if (left)
+
+        //                {
+        //                    Instantiate(CUBE, pos, Quaternion.identity);
+        //                    //rend.sprite = spRUL;
+        //                }
+        //                else
+        //                {
+        //                    Instantiate(CUBE, pos, Quaternion.identity);
+        //                    //rend.sprite = spUR;
+        //                }
+        //            }
+        //            else if (left)
+        //            {
+        //                Instantiate(CUBE, pos, Quaternion.identity);
+        //                //rend.sprite = spUL;
+        //            }
+        //            else
+        //            {
+        //                Instantiate(CUBE, pos, Quaternion.identity);
+        //                //rend.sprite = spU;
+        //            }
+        //        }
+        //        return;
+        //    }
+        //    if (down)
+        //    {
+        //        if (right)
+        //        {
+        //            if (left)
+        //            {
+        //                Instantiate(CUBE, pos, Quaternion.identity);
+        //                //rend.sprite = spLDR;
+        //            }
+        //            else
+        //            {
+        //                Instantiate(CUBE, pos, Quaternion.identity);
+        //                //rend.sprite = spDR;
+        //            }
+        //        }
+        //        else if (left)
+        //        {
+        //            Instantiate(CUBE, pos, Quaternion.identity);
+        //            //rend.sprite = spDL;
+        //        }
+        //        else
+        //        {
+        //            Instantiate(CUBE, pos, Quaternion.identity);
+        //            ///rend.sprite = spD;
+        //        }
+        //        return;
+        //    }
+        //    if (right)
+        //    {
+        //        if (left)
+        //        {
+        //            Instantiate(CUBE, pos, Quaternion.identity);
+        //            //rend.sprite = spRL;
+        //        }
+        //        else
+        //        {
+        //            Instantiate(CUBE, pos, Quaternion.identity);
+        //            //rend.sprite = spR;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Instantiate(CUBE, pos, Quaternion.identity);
+        //        //rend.sprite = spL;
+        //    }
     }
 
 
-    //void SpawnRoom(Vector3 pos)
-    //{ //pick prefab based on adjaccent rooms
-    //    if (up)
-    //    {
-    //        if (down)
-    //        {
-    //            if (right)
-    //            {
-    //                if (left)
-    //                {
-    //                    Instantiate(room_EW, pos, Quaternion.identity);
-    //                }
-    //                else
-    //                {
-    //                    Instantiate(room_SW, pos, Quaternion.identity);
-
-    //                }
-    //            }
-    //            else if (left)
-    //            {
-    //                //
-    //                Instantiate(CUBE, pos, Quaternion.identity);
-    //                //rend.sprite = spULD;
-    //            }
-    //            else
-    //            {
-    //                Instantiate(room_W, pos, Quaternion.identity);
-    //                //rend.sprite = spUD;
-    //            }
-    //        }
-    //        else
-    //        {
-    //            if (right)
-    //            {
-    //                if (left)
-
-    //                {
-    //                    Instantiate(CUBE, pos, Quaternion.identity);
-    //                    //rend.sprite = spRUL;
-    //                }
-    //                else
-    //                {
-    //                    Instantiate(CUBE, pos, Quaternion.identity);
-    //                    //rend.sprite = spUR;
-    //                }
-    //            }
-    //            else if (left)
-    //            {
-    //                Instantiate(CUBE, pos, Quaternion.identity);
-    //                //rend.sprite = spUL;
-    //            }
-    //            else
-    //            {
-    //                Instantiate(CUBE, pos, Quaternion.identity);
-    //                //rend.sprite = spU;
-    //            }
-    //        }
-    //        return;
-    //    }
-    //    if (down)
-    //    {
-    //        if (right)
-    //        {
-    //            if (left)
-    //            {
-    //                Instantiate(CUBE, pos, Quaternion.identity);
-    //                //rend.sprite = spLDR;
-    //            }
-    //            else
-    //            {
-    //                Instantiate(CUBE, pos, Quaternion.identity);
-    //                //rend.sprite = spDR;
-    //            }
-    //        }
-    //        else if (left)
-    //        {
-    //            Instantiate(CUBE, pos, Quaternion.identity);
-    //            //rend.sprite = spDL;
-    //        }
-    //        else
-    //        {
-    //            Instantiate(CUBE, pos, Quaternion.identity);
-    //            ///rend.sprite = spD;
-    //        }
-    //        return;
-    //    }
-    //    if (right)
-    //    {
-    //        if (left)
-    //        {
-    //            Instantiate(CUBE, pos, Quaternion.identity);
-    //            //rend.sprite = spRL;
-    //        }
-    //        else
-    //        {
-    //            Instantiate(CUBE, pos, Quaternion.identity);
-    //            //rend.sprite = spR;
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Instantiate(CUBE, pos, Quaternion.identity);
-    //        //rend.sprite = spL;
-    //    }
-    //}
-
-
-}
+    }
