@@ -11,15 +11,16 @@ public class Pillar : MonoBehaviour {
     //public GameObject doors;
     public GameObject[] slide;
 
-    public SlidingDoor open;
+    private SlidingDoor open;
 
     //public Transform[] points;
 
     public GameObject Clock;
 
     // Use this for initialization
-    void Start () {
-
+    void Start ()
+    {
+        open = null;
 		
 	}
 	
@@ -43,12 +44,11 @@ public class Pillar : MonoBehaviour {
 
         for (int i = 0; i < slide.Length; i++)
         {
-            open = slide[i].GetComponent<SlidingDoor>();
-            open.keyon();
+            if (slide[i] != null)
+            {
+                open = slide[i].GetComponent<SlidingDoor>();
+                open.keyon();
+            }
         }
-
-
     }
-
-
 }

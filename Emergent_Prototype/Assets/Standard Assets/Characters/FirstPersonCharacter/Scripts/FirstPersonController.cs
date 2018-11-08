@@ -42,11 +42,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
-        public bool gameIsPaused;
+        public bool characterIsPaused;
 
         private void Awake()
         {
-            gameIsPaused = false;
+            characterIsPaused = false;
         }
 
         // Use this for initialization
@@ -68,6 +68,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         void Update()
         {
+            if (characterIsPaused)
+            {
+                return;
+            }
+
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -101,6 +106,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
+            if (characterIsPaused)
+            {
+                return;
+            }
+
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -243,7 +253,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            if (gameIsPaused)
+            if (characterIsPaused)
             {
                 return;
             }

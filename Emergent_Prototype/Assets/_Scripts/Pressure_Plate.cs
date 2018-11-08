@@ -11,8 +11,8 @@ public class Pressure_Plate : MonoBehaviour
         if (other.tag == ("Player"))
         {
             Clock.GetComponent<Countdown_Clock>().gameIsPlaying = true;
-            this.transform.position -= new Vector3(0, 1, 0);
-            Clock.GetComponent<Countdown_Clock>().timeLeft = 120;
+            this.transform.position -= new Vector3(0, 5, 0);
+            Clock.GetComponent<Countdown_Clock>().timeLeft = 30;
         }
     }
 }

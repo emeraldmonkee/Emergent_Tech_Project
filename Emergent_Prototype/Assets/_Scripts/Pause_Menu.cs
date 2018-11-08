@@ -9,16 +9,23 @@ public class Pause_Menu : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject UI_Menu;
 
+    private Game_Manager GM;
+
     public UnityStandardAssets.Characters.FirstPerson.FirstPersonController controller;
 
     void Start()
     {
+        GM = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
         Cursor.lockState = CursorLockMode.Locked;   
         Cursor.visible = false;
     }
 
     void Update ()
     {
+        if (GM.gameIsOver)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gameIsPaused)
@@ -35,7 +42,7 @@ public class Pause_Menu : MonoBehaviour
     public void Resume()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        controller.gameIsPaused = false;
+        GM.UnpauseCharacter();
         pauseMenu.SetActive(false);
         UI_Menu.SetActive(true);
         Time.timeScale = 1;
@@ -45,7 +52,7 @@ public class Pause_Menu : MonoBehaviour
     void Pause()
     {
         Cursor.lockState = CursorLockMode.Confined;
-        controller.gameIsPaused = true;
+        GM.PauseCharacter();
         UI_Menu.SetActive(false);
         pauseMenu.SetActive(true);
         Time.timeScale = 0;

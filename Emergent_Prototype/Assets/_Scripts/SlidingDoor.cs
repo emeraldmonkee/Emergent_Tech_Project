@@ -9,9 +9,6 @@ public class SlidingDoor : MonoBehaviour {
     public Vector3 open;
     public Vector3 close;
 
-    public Transform lockout;
-    public Transform lockin;
-
     public bool moved;
 
     public BoxCollider R;
@@ -60,7 +57,7 @@ public class SlidingDoor : MonoBehaviour {
     {
         if (moved == false)
         {
-            //GetComponent<BoxCollider>().transform.position = lockout.transform.position;
+            
             StartCoroutine(Lerp(door.transform, open, 1));
             moved = true;
         }
@@ -70,7 +67,7 @@ public class SlidingDoor : MonoBehaviour {
     {
         if (moved == true)
         {
-            //GetComponent<BoxCollider>().transform.position = lockout.transform.position;
+            
             StartCoroutine(Lerp(door.transform, close, 1));
             moved = false;
         }

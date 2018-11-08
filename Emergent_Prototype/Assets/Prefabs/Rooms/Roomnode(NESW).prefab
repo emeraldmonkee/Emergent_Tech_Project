@@ -4720,8 +4720,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3edd5ffaa102af4cbde8f796b19fc25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Gameover_UI: {fileID: 0}
   timeLeft: 0
   gameIsPlaying: 0
+  controller: {fileID: 0}
 --- !u!114 &114051188118666650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4827,8 +4829,6 @@ MonoBehaviour:
   door: {fileID: 1766399945711416}
   open: {x: 10.51, y: 6.5, z: 0}
   close: {x: 10.51, y: 2.5, z: 0}
-  lockout: {fileID: 4440066240771634}
-  lockin: {fileID: 4252449895507848}
   moved: 0
   R: {fileID: 65171431075436702}
 --- !u!114 &114393929573789048
@@ -4848,7 +4848,6 @@ MonoBehaviour:
   - {fileID: 1386615694604418}
   - {fileID: 1489152983510354}
   - {fileID: 1890557217416644}
-  open: {fileID: 0}
   Clock: {fileID: 1353895067558840}
 --- !u!114 &114395905257297794
 MonoBehaviour:
@@ -4953,8 +4952,6 @@ MonoBehaviour:
   door: {fileID: 1200145338684284}
   open: {x: 10.51, y: 6.5, z: 0}
   close: {x: 10.51, y: 2.5, z: 0}
-  lockout: {fileID: 4183147014118256}
-  lockin: {fileID: 4836031793661086}
   moved: 0
   R: {fileID: 65423388512082124}
 --- !u!114 &114659766229683488
@@ -5012,8 +5009,6 @@ MonoBehaviour:
   door: {fileID: 1448083210823864}
   open: {x: 10.51, y: 6.5, z: 0}
   close: {x: 10.51, y: 2.5, z: 0}
-  lockout: {fileID: 4860761224577082}
-  lockin: {fileID: 4743447980847790}
   moved: 0
   R: {fileID: 65378319719348434}
 --- !u!114 &114874583279927492
@@ -5042,8 +5037,6 @@ MonoBehaviour:
   door: {fileID: 1003522195381714}
   open: {x: 10.51, y: 6.5, z: 0}
   close: {x: 10.51, y: 2.5, z: 0}
-  lockout: {fileID: 4158191626366608}
-  lockin: {fileID: 4854475823113548}
   moved: 0
   R: {fileID: 65087504795081290}
 --- !u!114 &114986281509667520
