@@ -18,6 +18,8 @@ public class Game_Manager : MonoBehaviour
 
     private LevelCreation levelGenerator;
 
+    public GameObject Win_UI;
+
     private void Start()
     {
         levelGenerator = GameObject.Find("Generation").GetComponent<LevelCreation>();
@@ -57,6 +59,9 @@ public class Game_Manager : MonoBehaviour
 
     private void WinCondition()
     {
+        Win_UI.SetActive(true);
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         Debug.Log("YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEET");
     }
 }
