@@ -91,7 +91,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-c19957d572e3d0f8713916be33754601 Assembly-CSharp.dll:.Pressure_Plate
+fa389dd69efdfa80871fbe8ef51710d4 Assembly-CSharp.dll:.Pressure_Plate
 68203a2d90186aa6245d3bc6e3f65b52 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.TimedObjectActivator
 3c1b564871220582e840d74197d0104c Assembly-CSharp.dll:.LevelCreation
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -140,7 +140,7 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 fa1c317e7807ba3c9b05056693f277ff Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
 4ea8d9566bdcd2e6d7cf97aef45ed480 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.PlatformSpecificContent
 b5ae6ec09c414f297085ee38e6e0decd Assembly-CSharp.dll:.Pause_Menu
-42d16845a121df19b35d01bb5bf7331d Assembly-CSharp.dll:.Game_Manager
+18390e930501703c2b512381e5e1bcaa Assembly-CSharp.dll:.Game_Manager
 81d6a421cbac2031cd5e35b10c8ac717 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.ActivateTrigger
 60e3a31993bab65e1efb2350a900d178 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.InputAxisScrollbar
 2c7e6666ff54b0db8b35a5d74102118c Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.AxisTouchButton
@@ -202,6 +202,7 @@ c806e3d2b1901792a9117a20dc3622fd Assembly-CSharp.dll:.SlidingDoor
 ebc31dc7976aeffcc84e23b049016bd0 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FollowTarget
 2d5613dfea5ebe89d441816537142920 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 5b83580a22df4ed5e756000935aa4092 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.TimedObjectDestructor
+8b8495cc04f7417ef90dbdc5d14604ad Assembly-CSharp.dll:.Challenge_Spawner
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 38d304ed88dfc9511b02bc361aeca9d2 Assembly-CSharp.dll:.Lookat_Mouse
 7cf96a5808f001bd5d2b6b2e4bd3306e Assembly-CSharp.dll:.Pillar

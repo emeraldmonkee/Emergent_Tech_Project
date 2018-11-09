@@ -17,16 +17,14 @@ public class Pillar : MonoBehaviour {
 
     public GameObject Clock;
 
+    private Game_Manager GM;
+
     // Use this for initialization
     void Start ()
     {
+        GM = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
+
         open = null;
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
 		
 	}
 
@@ -37,6 +35,8 @@ public class Pillar : MonoBehaviour {
         key.SetActive(true);
         //doors.SetActive(false);
         Clock.GetComponent<Countdown_Clock>().gameIsPlaying = false;
+
+        GM.ChallengeCompleted();
         //for (int i = 0; i < points.Length; i++)
         //{
         //    Instantiate(roomnode, points[i].transform.position, points[i].transform.rotation);

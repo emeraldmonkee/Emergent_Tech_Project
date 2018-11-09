@@ -26,9 +26,8 @@ public class Pause_Menu : MonoBehaviour
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            Debug.Log("Escape key is pressed");
             if (gameIsPaused)
             {
                 Resume();
@@ -44,6 +43,7 @@ public class Pause_Menu : MonoBehaviour
     {
         Debug.Log("Game resumed.");
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         GM.UnpauseCharacter();
         pauseMenu.SetActive(false);
         UI_Menu.SetActive(true);
@@ -55,6 +55,7 @@ public class Pause_Menu : MonoBehaviour
     {
         Debug.Log("Game paused.");
         Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         GM.PauseCharacter();
         UI_Menu.SetActive(false);
         pauseMenu.SetActive(true);

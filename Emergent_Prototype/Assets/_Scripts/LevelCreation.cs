@@ -8,7 +8,7 @@ public class LevelCreation : MonoBehaviour
     Rooms[,] rooms;
     List<Vector2> takenPositions = new List<Vector2>();
     int gridSizeX, gridSizeY;
-    [SerializeField] int numberOfRooms;
+    [SerializeField] public int numberOfRooms;
 
     public bool up, down, left, right;
     public GameObject room_NESW, room_NES, room_ESW, room_SWN, room_WNE, room_NE, room_ES, room_SW, room_WN, room_NS, room_EW, room_N, room_E, room_S, room_W,CUBE;
