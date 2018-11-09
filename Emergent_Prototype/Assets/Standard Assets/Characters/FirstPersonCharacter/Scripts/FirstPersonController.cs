@@ -68,10 +68,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         void Update()
         {
-            if (characterIsPaused)
-            {
-                return;
-            }
 
             RotateView();
             // the jump state needs to read here to make sure it is not missed
@@ -106,10 +102,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
-            if (characterIsPaused)
-            {
-                return;
-            }
 
             float speed;
             GetInput(out speed);

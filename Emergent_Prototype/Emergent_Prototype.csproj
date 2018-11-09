@@ -317,6 +317,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\Btn_Manager.cs" />
+    <Compile Include="Assets\_Scripts\Challenge_Spawner.cs" />
     <Compile Include="Assets\_Scripts\Countdown_Clock.cs" />
     <Compile Include="Assets\_Scripts\DoorCol.cs" />
     <Compile Include="Assets\_Scripts\Doors.cs" />

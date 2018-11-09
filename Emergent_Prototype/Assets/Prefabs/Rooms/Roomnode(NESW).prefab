@@ -153,6 +153,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1166913095819734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4643892269750944}
+  - component: {fileID: 114658304213530478}
+  m_Layer: 0
+  m_Name: Challenge_Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1168830754088924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,7 +1564,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1869078172865114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.25, y: 0, z: 8.13}
+  m_LocalPosition: {x: -6.25, y: 0, z: 2.6}
   m_LocalScale: {x: 0.2, y: 0.1, z: 0.2}
   m_Children:
   - {fileID: 4797881159606396}
@@ -1922,6 +1938,19 @@ Transform:
   m_Father: {fileID: 4906502762333592}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &4643892269750944
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1166913095819734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4722050967614112}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4669897523621322
 Transform:
   m_ObjectHideFlags: 1
@@ -1993,6 +2022,7 @@ Transform:
   - {fileID: 224233094156992212}
   - {fileID: 4585553048427708}
   - {fileID: 4085435814899846}
+  - {fileID: 4643892269750944}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4723,7 +4753,6 @@ MonoBehaviour:
   Gameover_UI: {fileID: 0}
   timeLeft: 0
   gameIsPlaying: 0
-  controller: {fileID: 0}
 --- !u!114 &114051188118666650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4925,6 +4954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clock: {fileID: 1353895067558840}
+  challengeSpawner: {fileID: 1166913095819734}
 --- !u!114 &114554682584087390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4954,6 +4984,23 @@ MonoBehaviour:
   close: {x: 10.51, y: 2.5, z: 0}
   moved: 0
   R: {fileID: 65423388512082124}
+--- !u!114 &114658304213530478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1166913095819734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223bfa3d9212b0f479122a6c3b9f0ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _challenges:
+  - {fileID: 1403743393203360, guid: a7d05142676cd0d41ae07310c31242a1, type: 2}
+  - {fileID: 1693085735398726, guid: 53edf0a25c5e6604fb1ebc76662d950a, type: 2}
+  - {fileID: 1724094728775034, guid: d9befbee3890a7845a1d40bd57f50977, type: 2}
+  - {fileID: 1395811590783808, guid: 7d34b725dc9b02d4b8d0bb6e37286646, type: 2}
+  - {fileID: 1427859444858730, guid: 3985150a71740ff4daea36b71d66a710, type: 2}
 --- !u!114 &114659766229683488
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -140,6 +140,7 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 fa1c317e7807ba3c9b05056693f277ff Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
 4ea8d9566bdcd2e6d7cf97aef45ed480 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.PlatformSpecificContent
 b5ae6ec09c414f297085ee38e6e0decd Assembly-CSharp.dll:.Pause_Menu
+42d16845a121df19b35d01bb5bf7331d Assembly-CSharp.dll:.Game_Manager
 81d6a421cbac2031cd5e35b10c8ac717 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.ActivateTrigger
 60e3a31993bab65e1efb2350a900d178 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.InputAxisScrollbar
 2c7e6666ff54b0db8b35a5d74102118c Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.AxisTouchButton
@@ -211,4 +212,3 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 d3baf945a28bf6b4a4706c8193e7459e Assembly-CSharp.dll:.Player_Movement
 4378d967eaec3deb44c58833bcf95492 Assembly-CSharp.dll:.Countdown_Clock
 695c9335429d4798b6f74ca73c042ff4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-42d16845a121df19b35d01bb5bf7331d Assembly-CSharp.dll:.Game_Manager

@@ -55,7 +55,6 @@ public class Countdown_Clock : MonoBehaviour
 
     void LoseCondition()
     {
-        Cursor.lockState = CursorLockMode.Confined;
         GM.CharacterDied();
         Gameover_UI.SetActive(true);
     }

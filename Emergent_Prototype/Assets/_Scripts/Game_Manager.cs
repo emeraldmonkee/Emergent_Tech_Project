@@ -8,6 +8,13 @@ public class Game_Manager : MonoBehaviour
 
     public bool gameIsOver = false;
 
+    public GameObject lastChallenge;
+
+    private void Start()
+    {
+        lastChallenge = null;
+    }
+
     public void PauseCharacter()
     {
         controller.characterIsPaused = true;
@@ -22,6 +29,9 @@ public class Game_Manager : MonoBehaviour
     {
         gameIsOver = true;
         controller.characterIsPaused = true;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        Debug.Log(Cursor.lockState);
         Destroy(this);
     }
 }
