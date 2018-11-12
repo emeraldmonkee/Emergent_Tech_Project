@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-D:/Anglia Ruskin Year 3/Unity_Projects/Emergent_Tech_Project/Builds/Test_Build/Emergent_prototype.exe
+D:/Anglia Ruskin Year 3/Unity_Projects/Emergent_Tech_Project/Builds/Emergent_prototype.exe
 SceneListBegin?
 Assets/_Scenes/Menu.unity
 Assets/_Scenes/Prototype.unity
@@ -140,7 +140,7 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 fa1c317e7807ba3c9b05056693f277ff Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
 4ea8d9566bdcd2e6d7cf97aef45ed480 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.PlatformSpecificContent
 b5ae6ec09c414f297085ee38e6e0decd Assembly-CSharp.dll:.Pause_Menu
-18390e930501703c2b512381e5e1bcaa Assembly-CSharp.dll:.Game_Manager
+88831e18480b1c46e76f7ab3ed0ee5cb Assembly-CSharp.dll:.Game_Manager
 81d6a421cbac2031cd5e35b10c8ac717 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.ActivateTrigger
 60e3a31993bab65e1efb2350a900d178 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.InputAxisScrollbar
 2c7e6666ff54b0db8b35a5d74102118c Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.AxisTouchButton
