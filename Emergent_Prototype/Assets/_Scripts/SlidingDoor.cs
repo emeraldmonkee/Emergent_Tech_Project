@@ -4,40 +4,39 @@ using UnityEngine;
 
 public class SlidingDoor : MonoBehaviour {
 
-    public GameObject door;
+    //This script handles opening the doors -Tom
 
+
+    public GameObject door;
+    public BoxCollider R;
+
+    //The vectors values of the door being open and closed
     public Vector3 open;
     public Vector3 close;
 
+    //Bool to store in what state the door is in open or closed
     public bool moved;
 
-    public BoxCollider R;
 
-
-	// Use this for initialization
-	void Start () {
-
-        //initializes the vectors for the doors  -Tom
+	void Start ()
+    {
+        //Initializes the open and close vectors for the doors
         open = new Vector3(door.transform.position.x, door.transform.position.y + 4, door.transform.position.z);
         close = new Vector3(door.transform.position.x, door.transform.position.y, door.transform.position.z);
         moved = false;
         R.enabled = false;
 
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
+
+    //When key is placed onto the platform
     public void keyon()
     {
         R.enabled = true;
         //StartCoroutine(Lerp(door.transform,open,4));
     }
 
-    //Lerps the position of the door to its new position  -Tom
+    //Lerps the position of the door to its new position
     public IEnumerator Lerp(Transform transform, Vector3 position, float timeToMove)
     {
         //Debug.Log("open seasume");
@@ -52,7 +51,7 @@ public class SlidingDoor : MonoBehaviour {
         }
     }
 
-    //Detects when the player walks past a door, and reopens the door if the player somehow does not reach the new room before the door closes  -Tom
+  //Detects when the player walks past a door, and reopens the door if the player somehow does not reach the new room before the door closes  -Tom
   public void opendoor()
     {
         if (moved == false)

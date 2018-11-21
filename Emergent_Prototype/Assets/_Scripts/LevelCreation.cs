@@ -4,43 +4,45 @@ using UnityEngine;
 
 public class LevelCreation : MonoBehaviour
 {
-    Vector2 worldSize = new Vector2( 4, 4);
-    Rooms[,] rooms;
-    List<Vector2> takenPositions = new List<Vector2>();
-    int gridSizeX, gridSizeY;
-    [SerializeField] public int numberOfRooms;
 
-    public bool up, down, left, right;
-    public GameObject room_NESW, room_NES, room_ESW, room_SWN, room_WNE, room_NE, room_ES, room_SW, room_WN, room_NS, room_EW, room_N, room_E, room_S, room_W,CUBE;
+    // Array holding information 
+    [SerializeField] public int numberOfRooms;
+    List<Vector2> takenPositions = new List<Vector2>();
+    Rooms[,] rooms;
+    Vector2 worldSize = new Vector2(4, 4);
+    int gridSizeX, gridSizeY;
+
+    public GameObject room_NESW,CUBE;
+
     void Start()
     {
         if (numberOfRooms >= (worldSize.x * 2) * (worldSize.y * 2))
         { // make sure we dont try to make more rooms than can fit in our grid
             numberOfRooms = Mathf.RoundToInt((worldSize.x * 2) * (worldSize.y * 2));
         }
-        gridSizeX = Mathf.RoundToInt(worldSize.x); //note: these are half-extents
+        gridSizeX = Mathf.RoundToInt(worldSize.x);
         gridSizeY = Mathf.RoundToInt(worldSize.y);
         CreateRooms(); //lays out the actual map
-        SetRoomDoors(); //assigns the doors where rooms would connect
         DrawMap(); //instantiates objects to make up a map
     }
+
     void CreateRooms()
     {
-        //setup
+        
         rooms = new Rooms[gridSizeX * 2, gridSizeY * 2];
         rooms[gridSizeX, gridSizeY] = new Rooms(Vector2.zero, 1);
         takenPositions.Insert(0, Vector2.zero);
         Vector2 checkPos = Vector2.zero;
-        //magic numbers
+
         float randomCompare = 0.2f, randomCompareStart = 0.2f, randomCompareEnd = 0.01f;
-        //add rooms
+
         for (int i = 0; i < numberOfRooms - 1; i++)
         {
             float randomPerc = ((float)i) / (((float)numberOfRooms - 1));
             randomCompare = Mathf.Lerp(randomCompareStart, randomCompareEnd, randomPerc);
-            //grab new position
+
             checkPos = NewPosition();
-            //test new position
+
             if (NumberOfNeighbors(checkPos, takenPositions) > 1 && Random.value > randomCompare)
             {
                 int iterations = 0;
@@ -52,7 +54,7 @@ public class LevelCreation : MonoBehaviour
                 if (iterations >= 50)
                     print("error: could not create with fewer neighbors than : " + NumberOfNeighbors(checkPos, takenPositions));
             }
-            //finalize position
+
             rooms[(int)checkPos.x + gridSizeX, (int)checkPos.y + gridSizeY] = new Rooms(checkPos, 0);
             takenPositions.Insert(0, checkPos);
         }
@@ -66,10 +68,10 @@ public class LevelCreation : MonoBehaviour
             int index = Mathf.RoundToInt(Random.value * (takenPositions.Count - 1)); // pick a random room
             x = (int)takenPositions[index].x;//capture its x, y position
             y = (int)takenPositions[index].y;
-            bool UpDown = (Random.value < 0.5f);//randomly pick wether to look on hor or vert axis
-            bool positive = (Random.value < 0.5f);//pick whether to be positive or negative on that axis
+            bool UpDown = (Random.value < 0.5f);
+            bool positive = (Random.value < 0.5f);
             if (UpDown)
-            { //find the position bnased on the above bools
+            {
                 if (positive)
                 {
                     y += 1;
@@ -138,11 +140,13 @@ public class LevelCreation : MonoBehaviour
             checkingPos = new Vector2(x, y);
         } while (takenPositions.Contains(checkingPos) || x >= gridSizeX || x < -gridSizeX || y >= gridSizeY || y < -gridSizeY);
         if (inc >= 100)
-        { // break loop if it takes too long: this loop isnt garuanteed to find solution, which is fine for this
-            print("Error: could not find position with only one neighbor");
+        {
+            print("Error");
         }
         return checkingPos;
     }
+
+
     int NumberOfNeighbors(Vector2 checkingPos, List<Vector2> usedPositions)
     {
         int ret = 0; // start at zero, add 1 for each side there is already a room
@@ -164,6 +168,8 @@ public class LevelCreation : MonoBehaviour
         }
         return ret;
     }
+
+
     void DrawMap()
     {
         foreach (Rooms room in rooms)
@@ -176,280 +182,20 @@ public class LevelCreation : MonoBehaviour
             drawPos.x *= 35;//aspect ratio of map sprite
             drawPos.y *= 8;
             drawPos.z *= 35;
-            //create map obj and assign its variables
 
 
             SpawnRoom(drawPos);
             //type minigame type
-            //Type = room.type;
-            up = room.doorTop;
-            down = room.doorBot;
-            right = room.doorRight;
-            left = room.doorLeft;
-        }
-    }
-    void SetRoomDoors()
-    {
 
-        for (int x = 0; x < ((gridSizeX * 2)); x++)
-        {
-            for (int y = 0; y < ((gridSizeY * 2)); y++)
-            {
-                if (rooms[x, y] == null)
-                {
-                    continue;
-                }
-                Vector2 gridPosition = new Vector2(x, y);
-                if (y - 1 < 0)
-                { //check above
-                    rooms[x, y].doorBot = false;
-                }
-                else
-                {
-                    rooms[x, y].doorBot = (rooms[x, y - 1] != null);
-                }
-                if (y + 1 >= gridSizeY * 2)
-                { //check bellow
-                    rooms[x, y].doorTop = false;
-                }
-                else
-                {
-                    rooms[x, y].doorTop = (rooms[x, y + 1] != null);
-                }
-                if (x - 1 < 0)
-                { //check left
-                    rooms[x, y].doorLeft = false;
-                }
-                else
-                {
-                    rooms[x, y].doorLeft = (rooms[x - 1, y] != null);
-                }
-                if (x + 1 >= gridSizeX * 2)
-                { //check right
-                    rooms[x, y].doorRight = false;
-                }
-                else
-                {
-                    rooms[x, y].doorRight = (rooms[x + 1, y] != null);
-                }
-            }
         }
     }
 
+
+    //Spawns rooms according thier location on the array
     void SpawnRoom(Vector3 pos)
-    { //pick prefab based on adjaccent rooms
-
+    { 
         Instantiate(room_NESW, pos, Quaternion.identity);
-        //    if (up)
-        //    {
-        //        if (down)
-        //        {
-        //            if (right)
-        //            {
-        //                if (left)
-        //                {
-        //                    Instantiate(room_NESW, pos, Quaternion.identity);
-        //                    Debug.Log("NESW");
-        //                }
-        //                else
-        //                {
-        //                    Instantiate(room_NES, pos, Quaternion.identity);
-        //                    //rend.sprite = spDRU;
-        //                }
-        //            }
-        //            else if (left)
-        //            {
-        //                //
-        //                Instantiate(room_SWN, pos, Quaternion.identity);
-        //                //rend.sprite = spULD;
-        //            }
-        //            else
-        //            {
-        //                Instantiate(room_NS, pos, Quaternion.identity);
-        //                //rend.sprite = spUD;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            if (right)
-        //            {
-        //                if (left)
 
-        //                {
-        //                    Instantiate(room_WNE, pos, Quaternion.identity);
-        //                    //rend.sprite = spRUL;
-        //                }
-        //                else
-        //                {
-        //                    Instantiate(room_NE, pos, Quaternion.identity);
-        //                    //rend.sprite = spUR;
-        //                }
-        //            }
-        //            else if (left)
-        //            {
-        //                Instantiate(room_WN, pos, Quaternion.identity);
-        //                //rend.sprite = spUL;
-        //            }
-        //            else
-        //            {
-        //                Instantiate(room_N, pos, Quaternion.identity);
-        //                //rend.sprite = spU;
-        //            }
-        //        }
-        //        return;
-        //    }
-        //    if (down)
-        //    {
-        //        if (right)
-        //        {
-        //            if (left)
-        //            {
-        //                Instantiate(room_ESW, pos, Quaternion.identity);
-        //                //rend.sprite = spLDR;
-        //            }
-        //            else
-        //            {
-        //                Instantiate(room_ES, pos, Quaternion.identity);
-        //                //rend.sprite = spDR;
-        //            }
-        //        }
-        //        else if (left)
-        //        {
-        //            Instantiate(room_SW, pos, Quaternion.identity);
-        //            //rend.sprite = spDL;
-        //        }
-        //        else
-        //        {
-        //            Instantiate(room_S, pos, Quaternion.identity);
-        //            ///rend.sprite = spD;
-        //        }
-        //        return;
-        //    }
-        //    if (right)
-        //    {
-        //        if (left)
-        //        {
-        //            Instantiate(room_EW, pos, Quaternion.identity);
-        //            //rend.sprite = spRL;
-        //        }
-        //        else
-        //        {
-        //            Instantiate(room_E, pos, Quaternion.identity);
-        //            //rend.sprite = spR;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Instantiate(room_W, pos, Quaternion.identity);
-        //        //rend.sprite = spL;
-        //    }
-        //}
-
-
-        //void SpawnRoom(Vector3 pos)
-        //{ //pick prefab based on adjaccent rooms
-        //    if (up)
-        //    {
-        //        if (down)
-        //        {
-        //            if (right)
-        //            {
-        //                if (left)
-        //                {
-        //                    Instantiate(room_EW, pos, Quaternion.identity);
-        //                }
-        //                else
-        //                {
-        //                    Instantiate(room_SW, pos, Quaternion.identity);
-
-        //                }
-        //            }
-        //            else if (left)
-        //            {
-        //                //
-        //                Instantiate(CUBE, pos, Quaternion.identity);
-        //                //rend.sprite = spULD;
-        //            }
-        //            else
-        //            {
-        //                Instantiate(room_W, pos, Quaternion.identity);
-        //                //rend.sprite = spUD;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            if (right)
-        //            {
-        //                if (left)
-
-        //                {
-        //                    Instantiate(CUBE, pos, Quaternion.identity);
-        //                    //rend.sprite = spRUL;
-        //                }
-        //                else
-        //                {
-        //                    Instantiate(CUBE, pos, Quaternion.identity);
-        //                    //rend.sprite = spUR;
-        //                }
-        //            }
-        //            else if (left)
-        //            {
-        //                Instantiate(CUBE, pos, Quaternion.identity);
-        //                //rend.sprite = spUL;
-        //            }
-        //            else
-        //            {
-        //                Instantiate(CUBE, pos, Quaternion.identity);
-        //                //rend.sprite = spU;
-        //            }
-        //        }
-        //        return;
-        //    }
-        //    if (down)
-        //    {
-        //        if (right)
-        //        {
-        //            if (left)
-        //            {
-        //                Instantiate(CUBE, pos, Quaternion.identity);
-        //                //rend.sprite = spLDR;
-        //            }
-        //            else
-        //            {
-        //                Instantiate(CUBE, pos, Quaternion.identity);
-        //                //rend.sprite = spDR;
-        //            }
-        //        }
-        //        else if (left)
-        //        {
-        //            Instantiate(CUBE, pos, Quaternion.identity);
-        //            //rend.sprite = spDL;
-        //        }
-        //        else
-        //        {
-        //            Instantiate(CUBE, pos, Quaternion.identity);
-        //            ///rend.sprite = spD;
-        //        }
-        //        return;
-        //    }
-        //    if (right)
-        //    {
-        //        if (left)
-        //        {
-        //            Instantiate(CUBE, pos, Quaternion.identity);
-        //            //rend.sprite = spRL;
-        //        }
-        //        else
-        //        {
-        //            Instantiate(CUBE, pos, Quaternion.identity);
-        //            //rend.sprite = spR;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Instantiate(CUBE, pos, Quaternion.identity);
-        //        //rend.sprite = spL;
-        //    }
     }
 
 
