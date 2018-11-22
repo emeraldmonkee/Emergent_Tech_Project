@@ -53,15 +53,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
-            m_Camera = Camera.main;
-            m_OriginalCameraPosition = m_Camera.transform.localPosition;
-            m_FovKick.Setup(m_Camera);
+            //m_Camera = Camera.main;
+            //m_OriginalCameraPosition = m_Camera.transform.localPosition;
+            //m_FovKick.Setup(m_Camera);
             m_HeadBob.Setup(m_Camera, m_StepInterval);
             m_StepCycle = 0f;
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
-			m_MouseLook.Init(transform , m_Camera.transform);
+			//m_MouseLook.Init(transform , m_Camera.transform);
         }
 
 
@@ -79,7 +79,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
                 StartCoroutine(m_JumpBob.DoBobCycle());
-                PlayLandingSound();
+                //PlayLandingSound();
                 m_MoveDir.y = 0f;
                 m_Jumping = false;
             }
@@ -92,12 +92,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void PlayLandingSound()
-        {
-            m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
-            m_NextStep = m_StepCycle + .5f;
-        }
+        //private void PlayLandingSound()
+        //{
+        //    m_AudioSource.clip = m_LandSound;
+        //    m_AudioSource.Play();
+        //    m_NextStep = m_StepCycle + .5f;
+        //}
 
 
         private void FixedUpdate()
@@ -137,7 +137,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
 
             ProgressStepCycle(speed);
-            UpdateCameraPosition(speed);
+            //UpdateCameraPosition(speed);
 
             m_MouseLook.UpdateCursorLock();
         }
@@ -186,28 +186,28 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void UpdateCameraPosition(float speed)
-        {
-            Vector3 newCameraPosition;
-            if (!m_UseHeadBob)
-            {
-                return;
-            }
-            if (m_CharacterController.velocity.magnitude > 0 && m_CharacterController.isGrounded)
-            {
-                m_Camera.transform.localPosition =
-                    m_HeadBob.DoHeadBob(m_CharacterController.velocity.magnitude +
-                                      (speed*(m_IsWalking ? 1f : m_RunstepLenghten)));
-                newCameraPosition = m_Camera.transform.localPosition;
-                newCameraPosition.y = m_Camera.transform.localPosition.y - m_JumpBob.Offset();
-            }
-            else
-            {
-                newCameraPosition = m_Camera.transform.localPosition;
-                newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
-            }
-            m_Camera.transform.localPosition = newCameraPosition;
-        }
+        //private void UpdateCameraPosition(float speed)
+        //{
+        //    Vector3 newCameraPosition;
+        //    if (!m_UseHeadBob)
+        //    {
+        //        return;
+        //    }
+        //    if (m_CharacterController.velocity.magnitude > 0 && m_CharacterController.isGrounded)
+        //    {
+        //        m_Camera.transform.localPosition =
+        //            m_HeadBob.DoHeadBob(m_CharacterController.velocity.magnitude +
+        //                              (speed*(m_IsWalking ? 1f : m_RunstepLenghten)));
+        //        newCameraPosition = m_Camera.transform.localPosition;
+        //        newCameraPosition.y = m_Camera.transform.localPosition.y - m_JumpBob.Offset();
+        //    }
+        //    else
+        //    {
+        //        newCameraPosition = m_Camera.transform.localPosition;
+        //        newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
+        //    }
+        //    m_Camera.transform.localPosition = newCameraPosition;
+        //}
 
 
         private void GetInput(out float speed)
@@ -250,7 +250,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
 
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            //m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 
 

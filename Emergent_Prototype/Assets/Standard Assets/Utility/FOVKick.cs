@@ -15,28 +15,28 @@ namespace UnityStandardAssets.Utility
         public AnimationCurve IncreaseCurve;
 
 
-        public void Setup(Camera camera)
-        {
-            CheckStatus(camera);
+        //public void Setup(Camera camera)
+        //{
+        //    CheckStatus(camera);
+        //
+        //    Camera = camera;
+        //    originalFov = camera.fieldOfView;
+        //}
 
-            Camera = camera;
-            originalFov = camera.fieldOfView;
-        }
 
-
-        private void CheckStatus(Camera camera)
-        {
-            if (camera == null)
-            {
-                throw new Exception("FOVKick camera is null, please supply the camera to the constructor");
-            }
-
-            if (IncreaseCurve == null)
-            {
-                throw new Exception(
-                    "FOVKick Increase curve is null, please define the curve for the field of view kicks");
-            }
-        }
+        //private void CheckStatus(Camera camera)
+        //{
+        //    if (camera == null)
+        //    {
+        //        throw new Exception("FOVKick camera is null, please supply the camera to the constructor");
+        //    }
+        //
+        //    if (IncreaseCurve == null)
+        //    {
+        //        throw new Exception(
+        //            "FOVKick Increase curve is null, please define the curve for the field of view kicks");
+        //    }
+        //}
 
 
         public void ChangeCamera(Camera camera)

@@ -24,7 +24,7 @@ namespace UnityStandardAssets.Utility
         public void Setup(Camera camera, float bobBaseInterval)
         {
             m_BobBaseInterval = bobBaseInterval;
-            m_OriginalCameraPosition = camera.transform.localPosition;
+            //m_OriginalCameraPosition = camera.transform.localPosition;
 
             // get the length of the curve in time
             m_Time = Bobcurve[Bobcurve.length - 1].time;

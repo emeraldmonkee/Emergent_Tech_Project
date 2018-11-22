@@ -11,6 +11,8 @@ public class Player : MonoBehaviour {
 
     public bool haskey;
 
+    public GameObject camrig;
+    public GameObject cam;
 
     // Use this for initialization
     void Start ()
@@ -22,6 +24,9 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+
+        camrig.transform.position = gameObject.transform.position - new Vector3(0, 0f, 0);
+        gameObject.transform.rotation = cam.transform.rotation;
 
         /*Fires a raycast infrount of the player  -Tom
           Detects keys and pillars*/
