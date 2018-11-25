@@ -28,7 +28,7 @@ public class Pressure_Plate : MonoBehaviour
             Clock.GetComponent<Countdown_Clock>().gameIsPlaying = true;
             podem.transform.position -= new Vector3(0f, 10f, 0f);
             this.transform.localPosition += new Vector3(0f, 0.07f, 0f);
-            Clock.GetComponent<Countdown_Clock>().timeLeft = 60;
+            Clock.GetComponent<Countdown_Clock>().maxTime = 60;
             challengeSpawner.GetComponent<Challenge_Spawner>().SpawnChallenge();
         }
     }

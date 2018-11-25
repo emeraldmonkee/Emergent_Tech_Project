@@ -34,7 +34,7 @@ Shader "CustomShader/Glitch_Shader"
 
 			sampler2D _MainTex;
 			sampler2D _DisplaceTex;
-			float _Magnitude;
+		    float _Magnitude;
 			
 			v2f vert (appdata v)
 			{
