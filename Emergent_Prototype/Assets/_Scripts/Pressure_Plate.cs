@@ -10,26 +10,30 @@ public class Pressure_Plate : MonoBehaviour
 
     public GameObject podem;
 
-    //private void OnTriggerEnter(Collider other)
+    //private void Update()
     //{
-    //    if (other.tag == ("Player"))
+
+    //    if (this.transform.localPosition.y <= 1.07)
     //    {
     //        Clock.GetComponent<Countdown_Clock>().gameIsPlaying = true;
-    //        this.transform.position -= new Vector3(0, 5, 0);
-    //        Clock.GetComponent<Countdown_Clock>().timeLeft = 60;
+    //        podem.transform.position -= new Vector3(0f, 10f, 0f);
+    //        this.transform.localPosition += new Vector3(0f, 0.01f, 0f);
+    //        Clock.GetComponent<Countdown_Clock>().maxTime = 60;
     //        challengeSpawner.GetComponent<Challenge_Spawner>().SpawnChallenge();
+    //        Debug.Log("Button Pressed");
     //    }
     //}
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (this.transform.localPosition.y <= 1.07)
+        if (other.gameObject.tag == "Challenge_Button")
         {
+            Debug.Log("Button Pressed");
+            challengeSpawner.GetComponent<Challenge_Spawner>().SpawnChallenge();
+            Clock.GetComponent<Countdown_Clock>().maxTime = 60;
             Clock.GetComponent<Countdown_Clock>().gameIsPlaying = true;
             podem.transform.position -= new Vector3(0f, 10f, 0f);
-            this.transform.localPosition += new Vector3(0f, 0.07f, 0f);
-            Clock.GetComponent<Countdown_Clock>().maxTime = 60;
-            challengeSpawner.GetComponent<Challenge_Spawner>().SpawnChallenge();
+            this.gameObject.isStatic = true;
         }
     }
 }

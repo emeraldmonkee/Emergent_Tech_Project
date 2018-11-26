@@ -6,9 +6,7 @@ public class Challenge_Spawner : MonoBehaviour
 {
     public List<GameObject> _challenges;
 
-    private GameObject lastChallenge;
-
-    private GameObject challengeToSpawn;
+    [SerializeField] private GameObject challengeToSpawn;
 
     private Game_Manager GM;
 
@@ -25,14 +23,14 @@ public class Challenge_Spawner : MonoBehaviour
             GM.lastChallenge = challengeToSpawn;
             SpawnChallenge();
         }
+        else if (challengeToSpawn == GM.lastChallenge)
+        {
+            SpawnChallenge();
+        }
         else if (challengeToSpawn != GM.lastChallenge)
         {
             GM.lastChallenge = challengeToSpawn;
             Instantiate(challengeToSpawn, this.transform.position, Quaternion.identity);
-        }
-        else if (challengeToSpawn == GM.lastChallenge)
-        {
-            SpawnChallenge();
         }
     }
 }

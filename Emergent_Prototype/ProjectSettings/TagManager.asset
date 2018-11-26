@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GameOver_UI
   - GameWin_UI
+  - Ball
+  - Challenge_Button
   layers:
   - Default
   - TransparentFX

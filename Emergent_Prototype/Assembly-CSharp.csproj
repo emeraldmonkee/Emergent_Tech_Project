@@ -62,11 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\Btn_Manager.cs" />
+    <Compile Include="Assets\_Scripts\Camera_Shader\GlitchEffect.cs" />
     <Compile Include="Assets\_Scripts\Challenge_Spawner.cs" />
     <Compile Include="Assets\_Scripts\Countdown_Clock.cs" />
     <Compile Include="Assets\_Scripts\DoorCol.cs" />
     <Compile Include="Assets\_Scripts\Doors.cs" />
     <Compile Include="Assets\_Scripts\Game_Manager.cs" />
+    <Compile Include="Assets\_Scripts\Key_Spawner.cs" />
     <Compile Include="Assets\_Scripts\LevelCreation.cs" />
     <Compile Include="Assets\_Scripts\Lookat_Mouse.cs" />
     <Compile Include="Assets\_Scripts\Pause_Menu.cs" />
@@ -497,6 +499,7 @@
     <None Include="Assets\LeapMotion\Core\readme.txt" />
     <None Include="Assets\LeapMotion\Core\Shaders\RuntimeGizmos.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Teleport\Shaders\Highlight.shader" />
+    <None Include="Assets\Shaders\Glitch_Shader.shader" />
     <None Include="Assets\LeapMotion\Core\Dependencies.txt" />
     <None Include="Assets\LeapMotion\Core\Shaders\ThresholdOverlay.shader" />
     <None Include="Assets\LeapMotion\Core\Shaders\PassthroughForeground.shader" />
@@ -721,11 +724,11 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>F:/Program Files/unity2018.2.8/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>I:/Anglia Ruskin Year 3/Unity_Projects/Emergent_Tech_Project/Emergent_Prototype/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="InteractionEngineUtility">
       <HintPath>I:/Anglia Ruskin Year 3/Unity_Projects/Emergent_Tech_Project/Emergent_Prototype/Assets/LeapMotion/Modules/InteractionEngine/Plugins/InteractionEngineUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Valve.Newtonsoft.Json">
+      <HintPath>I:/Anglia Ruskin Year 3/Unity_Projects/Emergent_Tech_Project/Emergent_Prototype/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/GamerARU1.FST-CGT-03/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
