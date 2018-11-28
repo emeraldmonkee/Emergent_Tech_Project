@@ -329,6 +329,7 @@
     <Compile Include="Assets\_Scripts\DoorCol.cs" />
     <Compile Include="Assets\_Scripts\Doors.cs" />
     <Compile Include="Assets\_Scripts\Game_Manager.cs" />
+    <Compile Include="Assets\_Scripts\Key_Spawner.cs" />
     <Compile Include="Assets\_Scripts\LevelCreation.cs" />
     <Compile Include="Assets\_Scripts\Lookat_Mouse.cs" />
     <Compile Include="Assets\_Scripts\Pause_Menu.cs" />

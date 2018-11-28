@@ -91,11 +91,11 @@ namespace Valve.VR
             EVRInputError err = OpenVR.Input.GetSkeletalActionData(handle, ref tempSkeletonActionData, skeletonActionData_size, SteamVR_Input_Source.GetHandle(inputSource));
             if (err != EVRInputError.None)
             {
-                Debug.LogError("GetSkeletalActionData error (" + fullPath + "): " + err.ToString() + " handle: " + handle.ToString()); 
+                //Debug.LogError("GetSkeletalActionData error (" + fullPath + "): " + err.ToString() + " handle: " + handle.ToString()); 
                 active[inputSource] = false;
                 return;
             }
-
+            
             active[inputSource] = active[inputSource] && tempSkeletonActionData.bActive; //anding from the pose active state
             activeOrigin[inputSource] = tempSkeletonActionData.activeOrigin;
 
