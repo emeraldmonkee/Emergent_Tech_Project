@@ -30,10 +30,10 @@ public class Pressure_Plate : MonoBehaviour
         {
             Debug.Log("Button Pressed");
             challengeSpawner.GetComponent<Challenge_Spawner>().SpawnChallenge();
-            Clock.GetComponent<Countdown_Clock>().maxTime = 60;
             Clock.GetComponent<Countdown_Clock>().gameIsPlaying = true;
+            Clock.GetComponent<Countdown_Clock>().maxTime = 60;
             podem.transform.position -= new Vector3(0f, 10f, 0f);
-            this.gameObject.isStatic = true;
+            other.gameObject.transform.position -= new Vector3(0f, 9f, 0f);
         }
     }
 }

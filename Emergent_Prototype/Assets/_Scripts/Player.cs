@@ -21,11 +21,11 @@ public class Player : MonoBehaviour {
     }
 
 
-    // Update is called once per frame
+    // Update is called once per frame.
     void Update ()
     {
 
-        camrig.transform.position = gameObject.transform.position - new Vector3(0, 2f, 0);
+        camrig.transform.position = gameObject.transform.position - new Vector3(0, 1.5f, 0);
         gameObject.transform.rotation = cam.transform.rotation;
 
         /*Fires a raycast infrount of the player  -Tom
