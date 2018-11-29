@@ -9,6 +9,7 @@ TagManager:
   - Ball
   - Challenge_Button
   - R_Target
+  - Keey
   layers:
   - Default
   - TransparentFX

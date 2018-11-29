@@ -5,6 +5,7 @@ using UnityEngine;
 public class Key_Spawner : MonoBehaviour
 {
     public GameObject Key;
+    public GameObject Stand;
 
     private int ballCount;
 
@@ -18,7 +19,7 @@ public class Key_Spawner : MonoBehaviour
         if (other.gameObject.tag == "Ball")
         {
             ballCount++;
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 
@@ -27,6 +28,7 @@ public class Key_Spawner : MonoBehaviour
         if (ballCount == 2)
         {
             Key.SetActive(true);
+            Stand.SetActive(true);
         }
     }
 }

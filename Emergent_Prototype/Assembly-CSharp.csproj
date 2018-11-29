@@ -61,6 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Scripts\Ball_Throwing_Challenge\Floor_Respawner.cs" />
+    <Compile Include="Assets\_Scripts\Ball_Throwing_Challenge\Key_Spawner.cs" />
     <Compile Include="Assets\_Scripts\Btn_Manager.cs" />
     <Compile Include="Assets\_Scripts\Camera_Shader\GlitchEffect.cs" />
     <Compile Include="Assets\_Scripts\Challenge_Spawner.cs" />
@@ -68,14 +70,15 @@
     <Compile Include="Assets\_Scripts\DoorCol.cs" />
     <Compile Include="Assets\_Scripts\Doors.cs" />
     <Compile Include="Assets\_Scripts\Game_Manager.cs" />
-    <Compile Include="Assets\_Scripts\Key_Spawner.cs" />
     <Compile Include="Assets\_Scripts\LevelCreation.cs" />
     <Compile Include="Assets\_Scripts\Lookat_Mouse.cs" />
     <Compile Include="Assets\_Scripts\Pause_Menu.cs" />
-    <Compile Include="Assets\_Scripts\Pillar.cs" />
+    <Compile Include="Assets\_Scripts\Pillar_Scripts\Pillar.cs" />
+    <Compile Include="Assets\_Scripts\Pillar_Scripts\Pillar_Collider.cs" />
     <Compile Include="Assets\_Scripts\Player.cs" />
     <Compile Include="Assets\_Scripts\Player_Movement.cs" />
     <Compile Include="Assets\_Scripts\Pressure_Plate.cs" />
+    <Compile Include="Assets\_Scripts\Raycastreflect.cs" />
     <Compile Include="Assets\_Scripts\Rooms.cs" />
     <Compile Include="Assets\_Scripts\Rotate.cs" />
     <Compile Include="Assets\_Scripts\SlidingDoor.cs" />

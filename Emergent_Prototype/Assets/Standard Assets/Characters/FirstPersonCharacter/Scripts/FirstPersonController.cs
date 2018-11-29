@@ -43,6 +43,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
 
         public bool characterIsPaused;
+        public float _Vertical;
 
         private void Awake()
         {
@@ -125,7 +126,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (m_Jump)
                 {
                     m_MoveDir.y = m_JumpSpeed;
-                    PlayJumpSound();
+                    //PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;
                 }
@@ -143,11 +144,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void PlayJumpSound()
-        {
-            m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
-        }
+        //private void PlayJumpSound()
+        //{
+        //    m_AudioSource.clip = m_JumpSound;
+        //    m_AudioSource.Play();
+        //}
 
 
         private void ProgressStepCycle(float speed)
@@ -209,12 +210,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
         //    m_Camera.transform.localPosition = newCameraPosition;
         //}
 
+        public void SetInputForwards()
+        {
+            _Vertical = 0.5f;
+        }
 
+        public void SetInputStill()
+        {
+            _Vertical = 0;
+        }
         private void GetInput(out float speed)
         {
             // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            float horizontal = 0;
+            float vertical = _Vertical;
 
             bool waswalking = m_IsWalking;
 
