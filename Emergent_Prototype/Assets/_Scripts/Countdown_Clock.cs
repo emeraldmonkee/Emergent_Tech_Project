@@ -8,8 +8,6 @@ public class Countdown_Clock : MonoBehaviour
 {
     private Text timerText;
 
-    [SerializeField] private GameObject Gameover_UI;
-
     public float maxTime;
     public float timeLeft;
     string mins;
@@ -26,16 +24,11 @@ public class Countdown_Clock : MonoBehaviour
     void Awake ()
     {
         GM = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
-        Gameover_UI = GameObject.Find("Gameover_UI");
         glitchEffects = GameObject.Find("Camera").GetComponent<GlitchEffect>();
 	}
 
     void Start()
     {
-        if(Gameover_UI.activeInHierarchy == true)
-        {
-            Gameover_UI.SetActive(false);
-        }
         timerText = GetComponent<Text>();
     }
     
@@ -119,8 +112,7 @@ public class Countdown_Clock : MonoBehaviour
 
     void LoseCondition()
     {
-        GM.CharacterDied();
-        Gameover_UI.SetActive(true);
+        GM.LoseCondition();
     }
 
     void Glitch1()

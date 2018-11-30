@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 65765490280883074}
   - component: {fileID: 114420729498833894}
   - component: {fileID: 54566258048825024}
+  - component: {fileID: 65652076331527374}
+  - component: {fileID: 65100630901033160}
   m_Layer: 0
   m_Name: keey
   m_TagString: Keey
@@ -170,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 1599174168767118}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0.676, y: -0.26, z: 0}
-  m_LocalScale: {x: 17, y: 17, z: 17}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 4297001408388324}
   - {fileID: 4467932135149612}
@@ -542,6 +544,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &65100630901033160
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354089994367470}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9174885, y: 0.5692942, z: 0.3578544}
+  m_Center: {x: 0.45874345, y: -0.21535313, z: -0.015991928}
+--- !u!65 &65652076331527374
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354089994367470}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.73169345, y: 0.50905764, z: 0.7062775}
+  m_Center: {x: 1.8291556, y: -0.2454713, z: -0.14686134}
 --- !u!65 &65765490280883074
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -552,8 +578,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 2, z: 2}
-  m_Center: {x: 0.8, y: 0, z: 0}
+  m_Size: {x: 1.1405584, y: 0.4355264, z: 1.2474563}
+  m_Center: {x: -0.16418962, y: -0.19409777, z: -0.017594175}
 --- !u!65 &65955540920611162
 BoxCollider:
   m_ObjectHideFlags: 1

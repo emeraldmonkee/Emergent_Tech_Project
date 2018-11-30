@@ -20,6 +20,9 @@ public class Game_Manager : MonoBehaviour
 
     public GameObject Win_UI;
 
+    public GameObject playerCharacter;
+
+
     private void Start()
     {
         levelGenerator = GameObject.Find("Generation").GetComponent<LevelCreation>();
@@ -37,16 +40,6 @@ public class Game_Manager : MonoBehaviour
         controller.characterIsPaused = false;
     }
 
-    public void CharacterDied()
-    {
-        gameIsOver = true;
-        controller.characterIsPaused = true;
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
-        Debug.Log(Cursor.lockState);
-        Destroy(this);
-    }
-
     public void ChallengeCompleted()
     {
         challengesCompleted++;
@@ -57,11 +50,17 @@ public class Game_Manager : MonoBehaviour
         }
     }
 
-    private void WinCondition()
+    public void WinCondition()
     {
-        Win_UI.SetActive(true);
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
+        playerCharacter.transform.position = new Vector3(0, 25.4f, 0);
         Debug.Log("YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEET");
+    }
+
+    public void LoseCondition()
+    {
+        gameIsOver = true;
+        controller.characterIsPaused = true;
+        playerCharacter.transform.position = new Vector3(0, 16.05f, 0);
+        Debug.Log("u ded NIBBA");
     }
 }
