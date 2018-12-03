@@ -183,9 +183,7 @@ public class LevelCreation : MonoBehaviour
             drawPos.y *= 8;
             drawPos.z *= 35;
 
-
             SpawnRoom(drawPos);
-            //type minigame type
 
         }
     }
@@ -193,9 +191,8 @@ public class LevelCreation : MonoBehaviour
 
     //Spawns rooms according thier location on the array
     void SpawnRoom(Vector3 pos)
-    { 
-        Instantiate(room_NESW, pos, Quaternion.identity);
-
+    {
+        Instantiate(room_NESW, pos, Quaternion.identity); 
     }
 
 
