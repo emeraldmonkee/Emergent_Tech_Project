@@ -2023,7 +2023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d28b703d56fb694080756683b0ff602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfRooms: 2
+  numberOfRooms: 1
   room_NESW: {fileID: 1168830754088924, guid: fc531b296044ea8468882b53b9a7baf3, type: 2}
   CUBE: {fileID: 1287589745672184, guid: 1b7bcbda16d63f744ad0eb5b16d2c325, type: 2}
 --- !u!1 &520229433
@@ -4920,7 +4920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1262138975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5365,8 +5365,33 @@ Prefab:
       objectReference: {fileID: 1902821860}
     - target: {fileID: 1168830754088924, guid: fc531b296044ea8468882b53b9a7baf3, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23352155414690728, guid: fc531b296044ea8468882b53b9a7baf3,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12e7a937d9dab7b4a9fd356b0de37922, type: 2}
+    - target: {fileID: 23569362984226528, guid: fc531b296044ea8468882b53b9a7baf3,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12e7a937d9dab7b4a9fd356b0de37922, type: 2}
+    - target: {fileID: 23428530221444666, guid: fc531b296044ea8468882b53b9a7baf3,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12e7a937d9dab7b4a9fd356b0de37922, type: 2}
+    - target: {fileID: 23511673111893040, guid: fc531b296044ea8468882b53b9a7baf3,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12e7a937d9dab7b4a9fd356b0de37922, type: 2}
+    - target: {fileID: 23715725511281140, guid: fc531b296044ea8468882b53b9a7baf3,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12e7a937d9dab7b4a9fd356b0de37922, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc531b296044ea8468882b53b9a7baf3, type: 2}
   m_IsPrefabAsset: 0
@@ -6287,7 +6312,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114501685626080500, guid: 2782b7913ba110747bd2d2376fd06bae,
+    - target: {fileID: 114180617534320588, guid: 2782b7913ba110747bd2d2376fd06bae,
         type: 2}
       propertyPath: _manager
       value: 
@@ -6297,7 +6322,7 @@ Prefab:
       propertyPath: _manager
       value: 
       objectReference: {fileID: 1902821860}
-    - target: {fileID: 114180617534320588, guid: 2782b7913ba110747bd2d2376fd06bae,
+    - target: {fileID: 114501685626080500, guid: 2782b7913ba110747bd2d2376fd06bae,
         type: 2}
       propertyPath: _manager
       value: 
