@@ -10,6 +10,9 @@ TagManager:
   - Challenge_Button
   - R_Target
   - Keey
+  - Quit_Button
+  - Menu_Button
+  - Game_Button
   layers:
   - Default
   - TransparentFX
