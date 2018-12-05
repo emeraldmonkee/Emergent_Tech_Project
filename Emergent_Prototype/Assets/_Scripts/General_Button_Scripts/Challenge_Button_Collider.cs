@@ -26,6 +26,6 @@ public class Challenge_Button_Collider : MonoBehaviour
         Debug.Log("Button Pressed");
         challengeSpawner.GetComponent<Challenge_Spawner>().SpawnChallenge();
         Clock.GetComponent<Countdown_Clock>().gameIsPlaying = true;
-        Clock.GetComponent<Countdown_Clock>().maxTime = 60;
+        Clock.GetComponent<Countdown_Clock>().maxTime = 120;
     }
 }

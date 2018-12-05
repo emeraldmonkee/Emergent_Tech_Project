@@ -13,6 +13,9 @@ TagManager:
   - Quit_Button
   - Menu_Button
   - Game_Button
+  - YBall
+  - BBall
+  - RBall
   layers:
   - Default
   - TransparentFX

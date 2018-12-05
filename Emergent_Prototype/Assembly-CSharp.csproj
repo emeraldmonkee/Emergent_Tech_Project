@@ -61,29 +61,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Scripts\Ball_Throwing_Challenge\Ball_Collider.cs" />
     <Compile Include="Assets\_Scripts\Ball_Throwing_Challenge\Floor_Respawner.cs" />
     <Compile Include="Assets\_Scripts\Ball_Throwing_Challenge\Key_Spawner.cs" />
-    <Compile Include="Assets\_Scripts\Btn_Manager.cs" />
-    <Compile Include="Assets\_Scripts\Button_Position.cs" />
     <Compile Include="Assets\_Scripts\Camera_Shader\GlitchEffect.cs" />
-    <Compile Include="Assets\_Scripts\Challenge_Spawner.cs" />
-    <Compile Include="Assets\_Scripts\Countdown_Clock.cs" />
-    <Compile Include="Assets\_Scripts\DoorCol.cs" />
-    <Compile Include="Assets\_Scripts\Doors.cs" />
-    <Compile Include="Assets\_Scripts\Game_Manager.cs" />
-    <Compile Include="Assets\_Scripts\LevelCreation.cs" />
-    <Compile Include="Assets\_Scripts\Lookat_Mouse.cs" />
-    <Compile Include="Assets\_Scripts\Pause_Menu.cs" />
-    <Compile Include="Assets\_Scripts\Pillar_Scripts\Pillar.cs" />
-    <Compile Include="Assets\_Scripts\Pillar_Scripts\Pillar_Collider.cs" />
-    <Compile Include="Assets\_Scripts\Player.cs" />
-    <Compile Include="Assets\_Scripts\Player_Movement.cs" />
-    <Compile Include="Assets\_Scripts\Pressure_Plate.cs" />
+    <Compile Include="Assets\_Scripts\General_Button_Scripts\Challenge_Button_Collider.cs" />
+    <Compile Include="Assets\_Scripts\General_Button_Scripts\General_Button_Collider.cs" />
+    <Compile Include="Assets\_Scripts\General_Button_Scripts\Navigation_Button_Collider.cs" />
+    <Compile Include="Assets\_Scripts\General_Game_Scripts\Game_Manager.cs" />
+    <Compile Include="Assets\_Scripts\General_Game_Scripts\Rotate.cs" />
+    <Compile Include="Assets\_Scripts\General_Room_Scripts\Challenge_Spawner.cs" />
+    <Compile Include="Assets\_Scripts\General_Room_Scripts\Countdown_Clock.cs" />
+    <Compile Include="Assets\_Scripts\General_Room_Scripts\DoorCol.cs" />
+    <Compile Include="Assets\_Scripts\General_Room_Scripts\Doors.cs" />
+    <Compile Include="Assets\_Scripts\General_Room_Scripts\LevelCreation.cs" />
+    <Compile Include="Assets\_Scripts\General_Room_Scripts\Pillar.cs" />
+    <Compile Include="Assets\_Scripts\General_Room_Scripts\Pillar_Collider.cs" />
+    <Compile Include="Assets\_Scripts\General_Room_Scripts\Rooms.cs" />
+    <Compile Include="Assets\_Scripts\General_Room_Scripts\SlidingDoor.cs" />
+    <Compile Include="Assets\_Scripts\Player_Scripts\Player.cs" />
     <Compile Include="Assets\_Scripts\Reflecting_Challenge\Mirror_hold.cs" />
     <Compile Include="Assets\_Scripts\Reflecting_Challenge\Raycastreflect.cs" />
-    <Compile Include="Assets\_Scripts\Rooms.cs" />
-    <Compile Include="Assets\_Scripts\Rotate.cs" />
-    <Compile Include="Assets\_Scripts\SlidingDoor.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\InertiaPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\ProjectionPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Arm.cs" />

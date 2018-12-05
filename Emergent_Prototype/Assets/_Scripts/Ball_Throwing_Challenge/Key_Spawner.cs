@@ -7,7 +7,7 @@ public class Key_Spawner : MonoBehaviour
     public GameObject Key;
     public GameObject Stand;
 
-    private int ballCount;
+    public int ballCount;
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class Key_Spawner : MonoBehaviour
 
     void Update()
     {
-        if (ballCount == 2)
+        if (ballCount == 3)
         {
             Key.SetActive(true);
             Stand.SetActive(true);
