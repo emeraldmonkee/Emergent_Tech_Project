@@ -28,6 +28,10 @@ public class Raycastreflect : MonoBehaviour {
     public GameObject stand;
     private object gameobject;
 
+    public GameObject Mirror1;
+    public GameObject Mirror2;
+    public GameObject Mirror3;
+
     void Awake()
     {
         //get the attached Transform component  
@@ -54,8 +58,6 @@ public class Raycastreflect : MonoBehaviour {
         //Set the first point of the line at the current attached game object position  
         lineRenderer.SetPosition(0, goTransform.position);
 
-        if(win == false)
-        {
             for (int i = 0; i <= nReflections; i++)
             {
                 //If the ray hasn't reflected yet  
@@ -102,7 +104,9 @@ public class Raycastreflect : MonoBehaviour {
                                 win = true;
                                 Key.SetActive(true);
                                 stand.SetActive(true);
-                                gameObject.SetActive(false);
+                                Mirror1.GetComponent<Rigidbody>().freezeRotation = true;
+                                Mirror2.GetComponent<Rigidbody>().freezeRotation = true;
+                                Mirror3.GetComponent<Rigidbody>().freezeRotation = true;
                             }
                             //Debug.Log("Target Hit");
 
@@ -121,7 +125,6 @@ public class Raycastreflect : MonoBehaviour {
                     }
                 }
             }
-        }
        
     }
 }

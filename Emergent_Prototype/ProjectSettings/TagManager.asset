@@ -4,9 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - GameOver_UI
-  - GameWin_UI
-  - Ball
   - Challenge_Button
   - R_Target
   - Keey
@@ -16,6 +13,12 @@ TagManager:
   - YBall
   - BBall
   - RBall
+  - Podium_Cube
+  - Practise_Button
+  - Game2_Button
+  - Game4_Button
+  - Game3_Button
+  - Game1_Button
   layers:
   - Default
   - TransparentFX

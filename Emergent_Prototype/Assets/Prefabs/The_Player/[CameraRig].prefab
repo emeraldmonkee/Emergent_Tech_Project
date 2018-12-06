@@ -126,6 +126,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1713237122530208
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4250570559455894}
+  - component: {fileID: 114357080839047706}
+  m_Layer: 0
+  m_Name: Interaction Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1761995993935086
 GameObject:
   m_ObjectHideFlags: 1
@@ -237,6 +253,21 @@ Transform:
   m_Father: {fileID: 4799064942639014}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4250570559455894
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1713237122530208}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.674, z: -0.074}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4577759703089530}
+  - {fileID: 4617963928580648}
+  m_Father: {fileID: 4691058470456332}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4254705792271592
 Transform:
   m_ObjectHideFlags: 1
@@ -284,11 +315,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1761995993935086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.674, z: 0.074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4975693661592536}
-  m_RootOrder: 2
+  m_Father: {fileID: 4250570559455894}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4617963928580648
 Transform:
@@ -297,11 +328,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1190314267185396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.674, z: 0.074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4975693661592536}
-  m_RootOrder: 3
+  m_Father: {fileID: 4250570559455894}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4691058470456332
 Transform:
@@ -314,6 +345,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4975693661592536}
+  - {fileID: 4250570559455894}
   m_Father: {fileID: 4949568947511788}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -353,7 +385,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259295327193760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1800001, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 4691058470456332}
@@ -372,8 +404,6 @@ Transform:
   m_Children:
   - {fileID: 4810150050361550}
   - {fileID: 4382020733810026}
-  - {fileID: 4577759703089530}
-  - {fileID: 4617963928580648}
   m_Father: {fileID: 4691058470456332}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -537,20 +567,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   borderThickness: 0.15
-  wireframeHeight: 4
-  drawWireframeWhenSelectedOnly: 0
+  wireframeHeight: 2.97
+  drawWireframeWhenSelectedOnly: 1
   drawInGame: 0
   size: 0
   color: {r: 0, g: 1, b: 1, a: 1}
   vertices:
-  - {x: 1.6499994, y: 0.01, z: -0.9500001}
-  - {x: -1.6499994, y: 0.01, z: -0.9500001}
-  - {x: -1.6499994, y: 0.01, z: 0.9500001}
-  - {x: 1.6499994, y: 0.01, z: 0.9500001}
-  - {x: 1.7999994, y: 0.01, z: -1.1000001}
-  - {x: -1.7999994, y: 0.01, z: -1.1000001}
-  - {x: -1.7999994, y: 0.01, z: 1.1000001}
-  - {x: 1.7999994, y: 0.01, z: 1.1000001}
+  - {x: 1.0000001, y: 0.01, z: -0.95000017}
+  - {x: -1.0000001, y: 0.01, z: -0.95000017}
+  - {x: -1.0000001, y: 0.01, z: 0.95000017}
+  - {x: 1.0000001, y: 0.01, z: 0.95000017}
+  - {x: 1.1500001, y: 0.01, z: -1.1000001}
+  - {x: -1.1500001, y: 0.01, z: -1.1000001}
+  - {x: -1.1500001, y: 0.01, z: 1.1000001}
+  - {x: 1.1500001, y: 0.01, z: 1.1000001}
+--- !u!114 &114357080839047706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1713237122530208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0625e574c0d47a241b7dfc7a8c67ca2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactionControllers:
+    _values:
+    - {fileID: 114964902581298320}
+    - {fileID: 114796225164616964}
+  hoverActivationRadius: 0.2
+  touchActivationRadius: 0.075
+  _autoGenerateLayers: 1
+  _templateLayer:
+    layerIndex: 0
+  _interactionLayer:
+    layerIndex: 9
+  _interactionNoContactLayer:
+    layerIndex: 10
+  _contactBoneLayer:
+    layerIndex: 11
+  _drawControllerRuntimeGizmos: 0
 --- !u!114 &114397183210404208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -719,7 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29207d17cdd06e84d9fecbdef2401c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 114357080839047706}
   _hoverEnabled: 1
   _contactEnabled: 1
   _graspingEnabled: 1
@@ -791,7 +848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29207d17cdd06e84d9fecbdef2401c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 114357080839047706}
   _hoverEnabled: 1
   _contactEnabled: 1
   _graspingEnabled: 1

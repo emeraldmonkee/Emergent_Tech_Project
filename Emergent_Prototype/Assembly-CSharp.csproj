@@ -80,6 +80,7 @@
     <Compile Include="Assets\_Scripts\General_Room_Scripts\Rooms.cs" />
     <Compile Include="Assets\_Scripts\General_Room_Scripts\SlidingDoor.cs" />
     <Compile Include="Assets\_Scripts\Player_Scripts\Player.cs" />
+    <Compile Include="Assets\_Scripts\Podium_Challenge\Podium_Challenge_Manager.cs" />
     <Compile Include="Assets\_Scripts\Reflecting_Challenge\Mirror_hold.cs" />
     <Compile Include="Assets\_Scripts\Reflecting_Challenge\Raycastreflect.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\InertiaPostProcessProvider.cs" />
