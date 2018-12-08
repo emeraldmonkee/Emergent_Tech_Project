@@ -69,6 +69,7 @@
     <Compile Include="Assets\_Scripts\General_Button_Scripts\General_Button_Collider.cs" />
     <Compile Include="Assets\_Scripts\General_Button_Scripts\Navigation_Button_Collider.cs" />
     <Compile Include="Assets\_Scripts\General_Game_Scripts\Game_Manager.cs" />
+    <Compile Include="Assets\_Scripts\General_Game_Scripts\Recognition_Manager.cs" />
     <Compile Include="Assets\_Scripts\General_Game_Scripts\Rotate.cs" />
     <Compile Include="Assets\_Scripts\General_Room_Scripts\Challenge_Spawner.cs" />
     <Compile Include="Assets\_Scripts\General_Room_Scripts\Countdown_Clock.cs" />
@@ -83,6 +84,9 @@
     <Compile Include="Assets\_Scripts\Podium_Challenge\Podium_Challenge_Manager.cs" />
     <Compile Include="Assets\_Scripts\Reflecting_Challenge\Mirror_hold.cs" />
     <Compile Include="Assets\_Scripts\Reflecting_Challenge\Raycastreflect.cs" />
+    <Compile Include="Assets\_Scripts\Voice_Challenge\Voice_Challenge_Manager.cs" />
+    <Compile Include="Assets\_Scripts\Voice_Challenge\Voice_Recognizer.cs" />
+    <Compile Include="Assets\_Scripts\Voice_Challenge\Voice_Triggers.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\InertiaPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\ProjectionPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Arm.cs" />

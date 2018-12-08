@@ -445,3 +445,7 @@ ff31c283a9bf38dce2fa1cc6c94fe6ba Assembly-CSharp.dll:Valve.VR.InteractionSystem.
 8c104ae2319e0a1e92ec32f3f699336e Assembly-CSharp.dll:.Key_Spawner
 f89331a0f0d81b23e6f2d5fff6fd3b2d Assembly-CSharp.dll:.Countdown_Clock
 695c9335429d4798b6f74ca73c042ff4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
+e0478349a39a114a66148e730228d923 Assembly-CSharp.dll:.Voice_Challenge_Manager
+9f0e836a78c80b83ff7d9422a8fb895d Assembly-CSharp.dll:.Voice_Triggers
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Recognition_Manager
+6387cb2290a30afc1cb1bb010117544f Assembly-CSharp.dll:.Voice_Recognizer

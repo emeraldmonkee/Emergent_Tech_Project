@@ -96,7 +96,6 @@ public class Countdown_Clock : MonoBehaviour
 
         if (timeLeft > 0)
         {
-            Debug.Log("THE TIMER IS COUNTING DOWN");
             timeLeft -= Time.deltaTime;
             mins = Mathf.Floor(((int)timeLeft % 3600) / 60).ToString("00");
             seconds = ((int)timeLeft % 60).ToString("00");

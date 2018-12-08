@@ -19,6 +19,8 @@ TagManager:
   - Game4_Button
   - Game3_Button
   - Game1_Button
+  - Mirror
+  - Coloured_Cube
   layers:
   - Default
   - TransparentFX

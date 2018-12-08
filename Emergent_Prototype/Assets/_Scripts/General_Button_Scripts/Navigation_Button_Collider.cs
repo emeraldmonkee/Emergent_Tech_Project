@@ -7,7 +7,6 @@ public class Navigation_Button_Collider : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Button Pressed");
         if (other.gameObject.tag == "Menu_Button")
         {
             Navigation_MainMenu();

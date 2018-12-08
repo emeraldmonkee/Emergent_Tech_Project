@@ -12,7 +12,7 @@ public class Challenge_Button_Collider : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Button Pressed");
+        
         if (other.gameObject.tag == "Challenge_Button")
         {
             ChallengeSpawner();
@@ -23,7 +23,7 @@ public class Challenge_Button_Collider : MonoBehaviour
 
     void ChallengeSpawner()
     {
-        Debug.Log("Button Pressed");
+        
         challengeSpawner.GetComponent<Challenge_Spawner>().SpawnChallenge();
         Clock.GetComponent<Countdown_Clock>().gameIsPlaying = true;
         Clock.GetComponent<Countdown_Clock>().maxTime = 120;
