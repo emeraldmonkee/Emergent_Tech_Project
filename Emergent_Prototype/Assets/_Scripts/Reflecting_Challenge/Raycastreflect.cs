@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Raycastreflect : MonoBehaviour {
 
+
+    //http://www.41post.com/4162/programming/unity-raycast-reflection
+
     //this game object's Transform  
     private Transform goTransform;
     //the attached line renderer  
@@ -24,13 +27,14 @@ public class Raycastreflect : MonoBehaviour {
     private int nPoints;
 
     public bool win = false;
-    public GameObject Key;
-    public GameObject stand;
     private object gameobject;
 
     public GameObject Mirror1;
-    public GameObject Mirror2;
-    public GameObject Mirror3;
+    public GameObject target;
+
+    public Reflect_Win wincount;
+    public GameObject winner;
+
 
     void Awake()
     {
@@ -97,7 +101,7 @@ public class Raycastreflect : MonoBehaviour {
             }
             else // the ray has reflected at least once  
             {
-                //Check if the ray has hit a mirror 
+                //Check if the ray has hit a mirror
                 if (Physics.Raycast(ray.origin, ray.direction, out hit, 50))//cast the ray 100 units at the specified direction  
                 {
                     //the refletion direction is the reflection of the ray's direction at the hit normal  
@@ -105,18 +109,20 @@ public class Raycastreflect : MonoBehaviour {
                     //cast the reflected ray, using the hit point as the origin and the reflected direction as the direction  
                     ray = new Ray(hit.point, inDirection);
 
-                    if (hit.transform.tag == "R_Target")
+
+                    if (hit.transform == target.transform)
                     {
-                        if (win == false)
-                        {
+
+                       if (win == false)
+                       {
                             win = true;
-                            Key.SetActive(true);
-                            stand.SetActive(true);
                             Mirror1.GetComponent<Rigidbody>().freezeRotation = true;
-                            Mirror2.GetComponent<Rigidbody>().freezeRotation = true;
-                            Mirror3.GetComponent<Rigidbody>().freezeRotation = true;
-                        }
-                        //Debug.Log("Target Hit");
+                            wincount = winner.GetComponent<Reflect_Win>();
+                            wincount.addcount();
+                       }
+                        
+
+                        Debug.Log("Target Hit");
 
                     }
 
