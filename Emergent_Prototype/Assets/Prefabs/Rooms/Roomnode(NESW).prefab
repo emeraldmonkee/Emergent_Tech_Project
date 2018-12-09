@@ -6992,6 +6992,7 @@ MonoBehaviour:
   - {fileID: 1724094728775034, guid: d9befbee3890a7845a1d40bd57f50977, type: 2}
   - {fileID: 1427859444858730, guid: 3985150a71740ff4daea36b71d66a710, type: 2}
   - {fileID: 1497155982479610, guid: 2782b7913ba110747bd2d2376fd06bae, type: 2}
+  - {fileID: 1200326039177238, guid: 8a0ab74064a11c44ea44f0b776ef0b07, type: 2}
   challengeToSpawn: {fileID: 0}
 --- !u!114 &114679713242127026
 MonoBehaviour:

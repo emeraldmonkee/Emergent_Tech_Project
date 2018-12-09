@@ -497,12 +497,7 @@ Prefab:
       propertyPath: _manager
       value: 
       objectReference: {fileID: 1902821860}
-    - target: {fileID: 114851661610267974, guid: 8a0ab74064a11c44ea44f0b776ef0b07,
-        type: 2}
-      propertyPath: _manager
-      value: 
-      objectReference: {fileID: 1902821860}
-    - target: {fileID: 114382140680587852, guid: 8a0ab74064a11c44ea44f0b776ef0b07,
+    - target: {fileID: 114295475037345568, guid: 8a0ab74064a11c44ea44f0b776ef0b07,
         type: 2}
       propertyPath: _manager
       value: 
