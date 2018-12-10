@@ -58,7 +58,7 @@ public class Voice_Challenge_Manager : MonoBehaviour
 
     private void Area1Instanciate()
     {
-         GameObject cubeToInstanciate = Coloured_Cubes[UnityEngine.Random.Range(0, Coloured_Cubes.Count - 1)];
+         GameObject cubeToInstanciate = Coloured_Cubes[UnityEngine.Random.Range(0, Coloured_Cubes.Count)];
         if (_lastCubeInstanciated == null)
         {
             _lastCubeInstanciated = cubeToInstanciate;
@@ -76,7 +76,7 @@ public class Voice_Challenge_Manager : MonoBehaviour
 
     private void Area2Instanciate()
     {
-        GameObject cubeToInstanciate = Coloured_Cubes[UnityEngine.Random.Range(0, Coloured_Cubes.Count - 1)];
+        GameObject cubeToInstanciate = Coloured_Cubes[UnityEngine.Random.Range(0, Coloured_Cubes.Count)];
 
         if (cubeToInstanciate == _lastCubeInstanciated)
         {
@@ -90,7 +90,7 @@ public class Voice_Challenge_Manager : MonoBehaviour
 
     private void Area3Instanciate()
     {
-        GameObject cubeToInstanciate = Coloured_Cubes[UnityEngine.Random.Range(0, Coloured_Cubes.Count - 1)];
+        GameObject cubeToInstanciate = Coloured_Cubes[UnityEngine.Random.Range(0, Coloured_Cubes.Count)];
 
         if (cubeToInstanciate == _lastCubeInstanciated)
         {
