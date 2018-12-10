@@ -17,7 +17,7 @@ public class Challenge_Spawner : MonoBehaviour
 
     public void SpawnChallenge()
     {
-        challengeToSpawn = _challenges[UnityEngine.Random.Range(0, _challenges.Count - 1)];
+        challengeToSpawn = _challenges[UnityEngine.Random.Range(0, _challenges.Count)];
         if(GM.lastChallenge == null)
         {
             GM.lastChallenge = challengeToSpawn;
